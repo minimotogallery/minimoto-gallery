@@ -29,3 +29,33 @@ Puedes crear una rama de prueba:
 ## Publicación directa
 
 El paquete no requiere compilación, npm ni servidor. Es HTML, CSS y JavaScript estático.
+
+
+## Actualización V2 — Página independiente «Quiénes somos»
+
+Subir también a la carpeta `minimoto-gallery/`:
+
+- `quienes-somos.html`
+- `quienes-somos.css`
+
+Además, sustituir los archivos actualizados:
+
+- `index.html`
+- `style.css`
+
+
+## Actualización V3 — versión bilingüe
+
+Añadir también:
+
+- `index-en.html`
+- `app-en.js`
+- `quienes-somos-en.html`
+
+Sustituir los archivos actualizados:
+
+- `index.html`
+- `quienes-somos.html`
+- `style.css`
+
+La navegación incluye ahora selectores ES / EN.

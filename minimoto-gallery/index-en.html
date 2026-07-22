@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#282828">
-  <meta name="description" content="MiniMoto Gallery — exposiciones, residencias, activaciones y proyectos en el sureste español.">
+  <meta name="description" content="MiniMoto Gallery — exhibitions, residencies, activations and projects in the Spanish Southeast.">
   <title>MiniMoto Gallery — Battle Ground</title>
 
   <link rel="icon" href="./assets/favicon.png" type="image/png">
@@ -13,28 +13,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./style.css">
-  <script src="./app.js" defer></script>
+  <script src="./app-en.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#battle-ground">Saltar al tablero</a>
+  <a class="skip-link" href="#battle-ground">Skip to the board</a>
 
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="MiniMoto Gallery, inicio">
+    <a class="brand" href="#top" aria-label="MiniMoto Gallery, home">
       <img src="./assets/minimoto-wordmark.png" alt="MiniMoto Gallery">
     </a>
 
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
-      Menú
+      Menu
     </button>
 
-    <nav id="primary-nav" class="primary-nav" aria-label="Navegación principal">
-      <a href="#battle-ground">Proyectos</a>
-      <a class="language-link" href="./index-en.html" lang="en" aria-label="View website in English">EN</a>
-      <a href="./quienes-somos.html" target="_blank" rel="noopener noreferrer">Quiénes somos ↗</a>
-      <button id="artists-open" type="button">Artistas</button>
-      <button id="index-open" type="button">Índice</button>
-      <button id="remix" type="button">Reordenar tablero</button>
-      <a href="mailto:minimotogallery@gmail.com">Contacto ↗</a>
+    <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+      <a href="#battle-ground">Projects</a>
+      <a class="language-link" href="./index.html" lang="es" aria-label="Ver la web en español">ES</a>
+      <a href="./quienes-somos-en.html" target="_blank" rel="noopener noreferrer">Who we are ↗</a>
+      <button id="artists-open" type="button">Artists</button>
+      <button id="index-open" type="button">Index</button>
+      <button id="remix" type="button">Remix board</button>
+      <a href="mailto:minimotogallery@gmail.com">Contact ↗</a>
     </nav>
   </header>
 
@@ -49,12 +49,12 @@
 
       <div class="intro-aside" aria-label="Descripción breve">
         <span class="sigil-text" aria-hidden="true">✣</span>
-        <p>Exposiciones · residencias · activaciones · fricción entre prácticas.</p>
+        <p>Exhibitions · residencies · activations · friction between practices.</p>
       </div>
 
       <div class="intro-coordinate" aria-hidden="true">
         37°59′N / 1°07′W<br>
-        <span>scriptorium operativo</span>
+        <span>operational scriptorium</span>
       </div>
 
       <img class="intro-sigil" src="./assets/minimoto-sigil.png" alt="" aria-hidden="true">
@@ -64,23 +64,23 @@
       <header class="battle-header">
         <div>
           <p class="section-number">I / TABULA</p>
-          <h2 id="battle-title">Campo de proyectos</h2>
+          <h2 id="battle-title">Project field</h2>
         </div>
 
-        <div class="battle-tools" aria-label="Herramientas del tablero">
-          <p><span class="status-dot" aria-hidden="true"></span> tablero activo</p>
-          <button id="reset-layout" type="button">Restaurar orden</button>
+        <div class="battle-tools" aria-label="Board tools">
+          <p><span class="status-dot" aria-hidden="true"></span> board active</p>
+          <button id="reset-layout" type="button">Restore order</button>
         </div>
       </header>
 
-      <div id="battle-ground" class="battle-ground" aria-label="Tablero interactivo de proyectos">
+      <div id="battle-ground" class="battle-ground" aria-label="Interactive project board">
         <div class="board-grid" aria-hidden="true"></div>
         <div class="board-cross cross-a" aria-hidden="true"></div>
         <div class="board-cross cross-b" aria-hidden="true"></div>
         <p class="board-instruction">
-          <span>clic: ampliar</span>
-          <span>asa ⠿: mover</span>
-          <span>botón: reordenar</span>
+          <span>click: enlarge</span>
+          <span>handle ⠿: move</span>
+          <span>button: remix</span>
         </p>
         <div id="project-layer" class="project-layer" role="list"></div>
       </div>
@@ -89,17 +89,17 @@
     <section class="about-gateway" aria-labelledby="about-gateway-title">
       <p class="section-number">II / LIBER</p>
       <div class="about-gateway-grid">
-        <h2 id="about-gateway-title">Acerca de MiniMoto</h2>
+        <h2 id="about-gateway-title">About MiniMoto</h2>
         <p>
-          Una galería pequeña solo en escala. El resto sucede en otra medida.
+          A gallery small only in scale. Everything else happens at another magnitude.
         </p>
         <a
           class="about-scroll-link"
-          href="./quienes-somos.html"
+          href="./quienes-somos-en.html"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Abrir pergamino ↗
+          Open scroll ↗
         </a>
       </div>
     </section>
@@ -111,13 +111,13 @@
     <p>MiniMoto Gallery<br>Spanish Southeast</p>
     <div>
       <a href="https://www.instagram.com/minimotogallery/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
-      <a href="mailto:minimotogallery@gmail.com">Correo ↗</a>
+      <a href="mailto:minimotogallery@gmail.com">Email ↗</a>
     </div>
     <p id="local-time" class="footer-time">--:--:-- / Murcia</p>
   </footer>
 
   <dialog id="project-dialog" class="project-dialog" aria-labelledby="dialog-title">
-    <button class="dialog-close" type="button" aria-label="Cerrar proyecto">×</button>
+    <button class="dialog-close" type="button" aria-label="Close project">×</button>
 
     <div class="dialog-stage">
       <figure class="dialog-figure">
@@ -128,8 +128,8 @@
         </figcaption>
       </figure>
 
-      <button class="gallery-arrow gallery-prev" type="button" aria-label="Imagen anterior">←</button>
-      <button class="gallery-arrow gallery-next" type="button" aria-label="Imagen siguiente">→</button>
+      <button class="gallery-arrow gallery-prev" type="button" aria-label="Previous image">←</button>
+      <button class="gallery-arrow gallery-next" type="button" aria-label="Next image">→</button>
     </div>
 
     <article class="dialog-content">
@@ -145,26 +145,26 @@
       <div id="dialog-tags" class="dialog-tags"></div>
 
       <section class="related-projects" aria-labelledby="related-title">
-        <h3 id="related-title">Misma constelación</h3>
+        <h3 id="related-title">Same constellation</h3>
         <div id="related-list"></div>
       </section>
     </article>
   </dialog>
 
   <dialog id="index-dialog" class="index-dialog" aria-labelledby="index-title">
-    <button class="dialog-close" type="button" aria-label="Cerrar índice">×</button>
+    <button class="dialog-close" type="button" aria-label="Close index">×</button>
     <header>
       <p class="section-number">INDEX / MM</p>
-      <h2 id="index-title">Archivo operativo</h2>
+      <h2 id="index-title">Operational archive</h2>
     </header>
     <ol id="project-index-list"></ol>
   </dialog>
 
   <dialog id="artists-dialog" class="artists-dialog" aria-labelledby="artists-title">
-    <button class="dialog-close" type="button" aria-label="Cerrar artistas">×</button>
+    <button class="dialog-close" type="button" aria-label="Close artists">×</button>
     <header>
       <p class="section-number">ORDO / PERSONAE</p>
-      <h2 id="artists-title">Artistas y agentes</h2>
+      <h2 id="artists-title">Artists and agents</h2>
     </header>
     <div id="artists-list"></div>
   </dialog>

@@ -56,3 +56,16 @@ La web carga desde Google Fonts:
 - Grenze Gotisch
 
 Existen sustituciones de sistema para que la página siga funcionando si las fuentes externas no cargan.
+
+
+## Bilingual version
+
+Spanish:
+- `index.html`
+- `quienes-somos.html`
+- `app.js`
+
+English:
+- `index-en.html`
+- `quienes-somos-en.html`
+- `app-en.js`
