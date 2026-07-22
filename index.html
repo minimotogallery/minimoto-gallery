@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#282828">
+  <meta name="description" content="MiniMoto Gallery — exposiciones, residencias, activaciones y proyectos en el sureste español.">
+  <title>MiniMoto Gallery — Battle Ground</title>
+
+  <link rel="icon" href="./assets/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#battle-ground">Saltar al tablero</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="MiniMoto Gallery, inicio">
+      <img src="./assets/minimoto-wordmark.png" alt="MiniMoto Gallery">
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      Menú
+    </button>
+
+    <nav id="primary-nav" class="primary-nav" aria-label="Navegación principal">
+      <a href="#battle-ground">Proyectos</a>
+      <a class="language-link" href="./index-en.html" lang="en" aria-label="View website in English">EN</a>
+      <a href="./quienes-somos.html" target="_blank" rel="noopener noreferrer">Quiénes somos ↗</a>
+      <button id="artists-open" type="button">Artistas</button>
+      <button id="index-open" type="button">Índice</button>
+      <button id="remix" type="button">Reordenar tablero</button>
+      <a href="mailto:minimotogallery@gmail.com">Contacto ↗</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="intro" aria-labelledby="intro-title">
+      <p class="micro-label">MINIMOTO GALLERY / MURCIA / 2026 / MM–ORDO–006</p>
+
+      <h1 id="intro-title">
+        <span>Battle</span>
+        <span class="neo-word">ground</span>
+      </h1>
+
+      <div class="intro-aside" aria-label="Descripción breve">
+        <span class="sigil-text" aria-hidden="true">✣</span>
+        <p>Exposiciones · residencias · activaciones · fricción entre prácticas.</p>
+      </div>
+
+      <div class="intro-coordinate" aria-hidden="true">
+        37°59′N / 1°07′W<br>
+        <span>scriptorium operativo</span>
+      </div>
+
+      <img class="intro-sigil" src="./assets/minimoto-sigil.png" alt="" aria-hidden="true">
+    </section>
+
+    <section class="battle-section" aria-labelledby="battle-title">
+      <header class="battle-header">
+        <div>
+          <p class="section-number">I / TABULA</p>
+          <h2 id="battle-title">Campo de proyectos</h2>
+        </div>
+
+        <div class="battle-tools" aria-label="Herramientas del tablero">
+          <p><span class="status-dot" aria-hidden="true"></span> tablero activo</p>
+          <button id="reset-layout" type="button">Restaurar orden</button>
+        </div>
+      </header>
+
+      <div id="battle-ground" class="battle-ground" aria-label="Tablero interactivo de proyectos">
+        <div class="board-grid" aria-hidden="true"></div>
+        <div class="board-cross cross-a" aria-hidden="true"></div>
+        <div class="board-cross cross-b" aria-hidden="true"></div>
+        <p class="board-instruction">
+          <span>clic: ampliar</span>
+          <span>asa ⠿: mover</span>
+          <span>botón: reordenar</span>
+        </p>
+        <div id="project-layer" class="project-layer" role="list"></div>
+      </div>
+    </section>
+
+    <section class="about-gateway" aria-labelledby="about-gateway-title">
+      <p class="section-number">II / LIBER</p>
+      <div class="about-gateway-grid">
+        <h2 id="about-gateway-title">Acerca de MiniMoto</h2>
+        <p>
+          Una galería pequeña solo en escala. El resto sucede en otra medida.
+        </p>
+        <a
+          class="about-scroll-link"
+          href="./quienes-somos.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Abrir pergamino ↗
+        </a>
+      </div>
+    </section>
+
+</main>
+
+  <footer class="site-footer">
+    <img src="./assets/minimoto-sigil.png" alt="" aria-hidden="true">
+    <p>MiniMoto Gallery<br>Spanish Southeast</p>
+    <div>
+      <a href="https://www.instagram.com/minimotogallery/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+      <a href="mailto:minimotogallery@gmail.com">Correo ↗</a>
+    </div>
+    <p id="local-time" class="footer-time">--:--:-- / Murcia</p>
+  </footer>
+
+  <dialog id="project-dialog" class="project-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="Cerrar proyecto">×</button>
+
+    <div class="dialog-stage">
+      <figure class="dialog-figure">
+        <img id="dialog-image" src="" alt="">
+        <figcaption>
+          <span id="image-count">01 / 01</span>
+          <span id="image-caption"></span>
+        </figcaption>
+      </figure>
+
+      <button class="gallery-arrow gallery-prev" type="button" aria-label="Imagen anterior">←</button>
+      <button class="gallery-arrow gallery-next" type="button" aria-label="Imagen siguiente">→</button>
+    </div>
+
+    <article class="dialog-content">
+      <div class="dialog-seal" aria-hidden="true">
+        <img src="./assets/minimoto-sigil.png" alt="">
+      </div>
+
+      <p id="dialog-kicker" class="dialog-kicker"></p>
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-artist" class="dialog-artist"></p>
+
+      <div id="dialog-body" class="dialog-body"></div>
+      <div id="dialog-tags" class="dialog-tags"></div>
+
+      <section class="related-projects" aria-labelledby="related-title">
+        <h3 id="related-title">Misma constelación</h3>
+        <div id="related-list"></div>
+      </section>
+    </article>
+  </dialog>
+
+  <dialog id="index-dialog" class="index-dialog" aria-labelledby="index-title">
+    <button class="dialog-close" type="button" aria-label="Cerrar índice">×</button>
+    <header>
+      <p class="section-number">INDEX / MM</p>
+      <h2 id="index-title">Archivo operativo</h2>
+    </header>
+    <ol id="project-index-list"></ol>
+  </dialog>
+
+  <dialog id="artists-dialog" class="artists-dialog" aria-labelledby="artists-title">
+    <button class="dialog-close" type="button" aria-label="Cerrar artistas">×</button>
+    <header>
+      <p class="section-number">ORDO / PERSONAE</p>
+      <h2 id="artists-title">Artistas y agentes</h2>
+    </header>
+    <div id="artists-list"></div>
+  </dialog>
+</body>
+</html>
