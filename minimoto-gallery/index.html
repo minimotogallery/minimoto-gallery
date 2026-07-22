@@ -1,195 +1,161 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Minimoto Gallery — stay tuned." />
-    <meta name="theme-color" content="#000000" />
-    <meta name="x-brand-reference" content="https://chatgpt.com/g/g-p-67c59cf43ea081918b3bf6cfeba8f137/c/6982919f-ad48-8393-94ae-1d3e0ede9404" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#282828">
+  <meta name="description" content="MiniMoto Gallery — exposiciones, residencias, activaciones y proyectos en el sureste español.">
+  <title>MiniMoto Gallery — Battle Ground</title>
 
-    <title>Minimoto Gallery — Stay tuned</title>
+  <link rel="icon" href="./assets/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#battle-ground">Saltar al tablero</a>
 
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="icon" href="./assets/logo-triple-dots.svg" type="image/svg+xml" />
-  </head>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="MiniMoto Gallery, inicio">
+      <img src="./assets/minimoto-wordmark.png" alt="MiniMoto Gallery">
+    </a>
 
-  <body>
-    <main class="page" aria-label="Minimoto Gallery">
-      <div class="hero">
-        <div class="controls" aria-label="Controls">
-          <button class="chip" type="button" id="sound" aria-label="Sonido: iniciar o pausar">
-            <span class="chipDot" aria-hidden="true"></span>
-            <span class="chipText" id="soundText">Sound</span>
-          </button>
-          <button class="chip" type="button" id="mode" aria-label="Cambiar modo de color">
-            <span class="chipDot chipDot--muted" aria-hidden="true"></span>
-            <span class="chipText">Mode</span>
-          </button>
-        </div>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      Menú
+    </button>
 
-        <div class="logo" aria-hidden="true">
-          <!-- Logo: tres puntos (brand) en composiciones sutiles -->
-          <div class="dots" aria-hidden="true">
-            <span class="dot d1"></span>
-            <span class="dot d2"></span>
-            <span class="dot d3"></span>
-          </div>
-        </div>
+    <nav id="primary-nav" class="primary-nav" aria-label="Navegación principal">
+      <a href="#battle-ground">Proyectos</a>
+      <button id="artists-open" type="button">Artistas</button>
+      <button id="index-open" type="button">Índice</button>
+      <button id="remix" type="button">Reordenar tablero</button>
+      <a href="mailto:minimotogallery@gmail.com">Contacto ↗</a>
+    </nav>
+  </header>
 
-        <p class="tagline">Stay tuned.</p>
+  <main id="top">
+    <section class="intro" aria-labelledby="intro-title">
+      <p class="micro-label">MINIMOTO GALLERY / MURCIA / 2026 / MM–ORDO–006</p>
+
+      <h1 id="intro-title">
+        <span>Battle</span>
+        <span class="neo-word">ground</span>
+      </h1>
+
+      <div class="intro-aside" aria-label="Descripción breve">
+        <span class="sigil-text" aria-hidden="true">✣</span>
+        <p>Exposiciones · residencias · activaciones · fricción entre prácticas.</p>
       </div>
-    </main>
 
-    <script>
-      (function () {
-        // ---- Mode toggle ----
-        const modeKey = 'minimoto:mode';
-        const root = document.documentElement;
-        const modeBtn = document.getElementById('mode');
+      <div class="intro-coordinate" aria-hidden="true">
+        37°59′N / 1°07′W<br>
+        <span>scriptorium operativo</span>
+      </div>
 
-        function applyMode(mode) {
-          root.dataset.mode = mode;
-          try { localStorage.setItem(modeKey, mode); } catch {}
-        }
+      <img class="intro-sigil" src="./assets/minimoto-sigil.png" alt="" aria-hidden="true">
+    </section>
 
-        let mode;
-        try { mode = localStorage.getItem(modeKey); } catch {}
-        if (!mode) mode = 'dark';
-        applyMode(mode);
+    <section class="battle-section" aria-labelledby="battle-title">
+      <header class="battle-header">
+        <div>
+          <p class="section-number">I / TABULA</p>
+          <h2 id="battle-title">Campo de proyectos</h2>
+        </div>
 
-        modeBtn?.addEventListener('click', () => {
-          const next = (root.dataset.mode === 'light') ? 'dark' : 'light';
-          applyMode(next);
-        });
+        <div class="battle-tools" aria-label="Herramientas del tablero">
+          <p><span class="status-dot" aria-hidden="true"></span> tablero activo</p>
+          <button id="reset-layout" type="button">Restaurar orden</button>
+        </div>
+      </header>
 
-        // ---- Background music (YouTube) ----
-        // Autoplay with sound is blocked; we start on first user interaction (Option A).
-        const YT_ID = 'u3G-Kz-X0Ws';
-        const soundKey = 'minimoto:sound';
-        const soundBtn = document.getElementById('sound');
-        const soundText = document.getElementById('soundText');
+      <div id="battle-ground" class="battle-ground" aria-label="Tablero interactivo de proyectos">
+        <div class="board-grid" aria-hidden="true"></div>
+        <div class="board-cross cross-a" aria-hidden="true"></div>
+        <div class="board-cross cross-b" aria-hidden="true"></div>
+        <p class="board-instruction">
+          <span>clic: ampliar</span>
+          <span>asa ⠿: mover</span>
+          <span>botón: reordenar</span>
+        </p>
+        <div id="project-layer" class="project-layer" role="list"></div>
+      </div>
+    </section>
 
-        let player;
-        let started = false;
-        let enabled = true;
-        try {
-          const saved = localStorage.getItem(soundKey);
-          if (saved === 'off') enabled = false;
-        } catch {}
+    <section class="manifesto" aria-labelledby="manifesto-title">
+      <p class="section-number">II / REGULA</p>
+      <h2 id="manifesto-title">Cada proyecto modifica el dispositivo.</h2>
+      <div class="manifesto-grid">
+        <p>La galería no se presenta como fondo neutral, sino como una estructura que cambia con quienes la ocupan.</p>
+        <p><span class="neo-inline">Reliquias</span>, errores, pruebas, documentos y restos permanecen activos dentro del archivo.</p>
+        <p>El tablero es maximalista. La navegación, deliberadamente sobria.</p>
+      </div>
+    </section>
+  </main>
 
-        function setSoundUI(on) {
-          if (!soundText) return;
-          soundText.textContent = on ? 'Sound' : 'Muted';
-          soundBtn?.setAttribute('aria-pressed', on ? 'true' : 'false');
-        }
+  <footer class="site-footer">
+    <img src="./assets/minimoto-sigil.png" alt="" aria-hidden="true">
+    <p>MiniMoto Gallery<br>Spanish Southeast</p>
+    <div>
+      <a href="https://www.instagram.com/minimotogallery/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+      <a href="mailto:minimotogallery@gmail.com">Correo ↗</a>
+    </div>
+    <p id="local-time" class="footer-time">--:--:-- / Murcia</p>
+  </footer>
 
-        function loadYT() {
-          if (window.YT && window.YT.Player) return Promise.resolve();
-          return new Promise((resolve) => {
-            const s = document.createElement('script');
-            s.src = 'https://www.youtube.com/iframe_api';
-            s.async = true;
-            document.head.appendChild(s);
-            window.onYouTubeIframeAPIReady = () => resolve();
-          });
-        }
+  <dialog id="project-dialog" class="project-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="Cerrar proyecto">×</button>
 
-        function ensurePlayer() {
-          if (player) return;
-          const host = document.createElement('div');
-          host.id = 'ytbg';
-          host.style.position = 'fixed';
-          host.style.width = '1px';
-          host.style.height = '1px';
-          host.style.left = '-9999px';
-          host.style.top = '0';
-          document.body.appendChild(host);
+    <div class="dialog-stage">
+      <figure class="dialog-figure">
+        <img id="dialog-image" src="" alt="">
+        <figcaption>
+          <span id="image-count">01 / 01</span>
+          <span id="image-caption"></span>
+        </figcaption>
+      </figure>
 
-          player = new window.YT.Player('ytbg', {
-            videoId: YT_ID,
-            playerVars: {
-              autoplay: 0,
-              controls: 0,
-              disablekb: 1,
-              fs: 0,
-              iv_load_policy: 3,
-              modestbranding: 1,
-              playsinline: 1,
-              rel: 0,
-              loop: 1,
-              playlist: YT_ID
-            },
-            events: {
-              onReady: (e) => {
-                // Start muted until user interaction actually calls play.
-                try { e.target.setVolume(35); } catch {}
-              },
-              onStateChange: (e) => {
-                // If video ends (shouldn't with loop), restart.
-                if (e.data === window.YT.PlayerState.ENDED) {
-                  try { e.target.playVideo(); } catch {}
-                }
-              }
-            }
-          });
-        }
+      <button class="gallery-arrow gallery-prev" type="button" aria-label="Imagen anterior">←</button>
+      <button class="gallery-arrow gallery-next" type="button" aria-label="Imagen siguiente">→</button>
+    </div>
 
-        async function startSound() {
-          if (started) return;
-          started = true;
-          await loadYT();
-          ensurePlayer();
-          if (!enabled) {
-            setSoundUI(false);
-            return;
-          }
-          // user gesture path
-          try {
-            player.unMute?.();
-            player.playVideo?.();
-            setSoundUI(true);
-          } catch {
-            setSoundUI(false);
-          }
-        }
+    <article class="dialog-content">
+      <div class="dialog-seal" aria-hidden="true">
+        <img src="./assets/minimoto-sigil.png" alt="">
+      </div>
 
-        function stopSound() {
-          enabled = false;
-          try { localStorage.setItem(soundKey, 'off'); } catch {}
-          try { player?.pauseVideo?.(); } catch {}
-          setSoundUI(false);
-        }
+      <p id="dialog-kicker" class="dialog-kicker"></p>
+      <h2 id="dialog-title"></h2>
+      <p id="dialog-artist" class="dialog-artist"></p>
 
-        function toggleSound() {
-          enabled = !enabled;
-          try { localStorage.setItem(soundKey, enabled ? 'on' : 'off'); } catch {}
-          if (!enabled) {
-            stopSound();
-            return;
-          }
-          // If enabling, try to play (may require gesture; button click is a gesture).
-          started = false;
-          startSound();
-        }
+      <div id="dialog-body" class="dialog-body"></div>
+      <div id="dialog-tags" class="dialog-tags"></div>
 
-        // Init UI
-        setSoundUI(enabled);
+      <section class="related-projects" aria-labelledby="related-title">
+        <h3 id="related-title">Misma constelación</h3>
+        <div id="related-list"></div>
+      </section>
+    </article>
+  </dialog>
 
-        // First interaction anywhere starts sound
-        const first = () => startSound();
-        window.addEventListener('pointerdown', first, { once: true, passive: true });
-        window.addEventListener('keydown', first, { once: true });
+  <dialog id="index-dialog" class="index-dialog" aria-labelledby="index-title">
+    <button class="dialog-close" type="button" aria-label="Cerrar índice">×</button>
+    <header>
+      <p class="section-number">INDEX / MM</p>
+      <h2 id="index-title">Archivo operativo</h2>
+    </header>
+    <ol id="project-index-list"></ol>
+  </dialog>
 
-        // Dedicated control
-        soundBtn?.addEventListener('click', (e) => {
-          e.preventDefault();
-          toggleSound();
-        });
-      })();
-    </script>
-  </body>
+  <dialog id="artists-dialog" class="artists-dialog" aria-labelledby="artists-title">
+    <button class="dialog-close" type="button" aria-label="Cerrar artistas">×</button>
+    <header>
+      <p class="section-number">ORDO / PERSONAE</p>
+      <h2 id="artists-title">Artistas y agentes</h2>
+    </header>
+    <div id="artists-list"></div>
+  </dialog>
+</body>
 </html>
