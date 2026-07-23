@@ -92,37 +92,51 @@
   <dialog id="project-dialog" class="project-dialog" aria-labelledby="dialog-title">
     <button class="dialog-close" type="button" aria-label="Close project">×</button>
 
-    <div class="dialog-stage">
-      <figure class="dialog-figure">
-        <img id="dialog-image" src="" alt="">
-        <figcaption>
-          <span id="image-count">01 / 01</span>
-          <span id="image-caption"></span>
-        </figcaption>
-      </figure>
+    <article id="dialog-card" class="expanded-project-card">
+      <header class="expanded-project-head">
+        <span id="dialog-id" class="expanded-project-id"></span>
+        <span id="dialog-status"></span>
+        <span id="dialog-year" class="expanded-project-year"></span>
+      </header>
 
-      <button class="gallery-arrow gallery-prev" type="button" aria-label="Previous image">←</button>
-      <button class="gallery-arrow gallery-next" type="button" aria-label="Next image">→</button>
-    </div>
+      <div class="expanded-project-visual">
+        <figure class="expanded-project-figure">
+          <img id="dialog-image" src="" alt="">
+          <figcaption>
+            <span id="image-count">01 / 01</span>
+            <span id="image-caption"></span>
+          </figcaption>
+        </figure>
 
-    <article class="dialog-content">
-      <div class="dialog-seal" aria-hidden="true">
-        <img src="./assets/minimoto-sigil.png" alt="">
+        <button class="gallery-arrow gallery-prev" type="button" aria-label="Previous image">←</button>
+        <button class="gallery-arrow gallery-next" type="button" aria-label="Next image">→</button>
       </div>
 
-      <p id="dialog-kicker" class="dialog-kicker"></p>
-      <h2 id="dialog-title"></h2>
-      <p id="dialog-artist" class="dialog-artist"></p>
-
-      <div id="dialog-body" class="dialog-body"></div>
-      <div id="dialog-tags" class="dialog-tags"></div>
-
-      <section class="related-projects" aria-labelledby="related-title">
-        <h3 id="related-title">Same constellation</h3>
-        <div id="related-list"></div>
+      <section class="expanded-project-title">
+        <h2 id="dialog-title"></h2>
+        <p>
+          <span id="dialog-artist"></span>
+          <span aria-hidden="true"> / </span>
+          <span id="dialog-type"></span>
+        </p>
       </section>
+
+      <section class="expanded-project-info">
+        <div id="dialog-body" class="dialog-body"></div>
+        <div class="expanded-project-aside">
+          <div id="dialog-tags" class="dialog-tags"></div>
+
+          <section class="related-projects" aria-labelledby="related-title">
+            <h3 id="related-title">Same constellation</h3>
+            <div id="related-list"></div>
+          </section>
+        </div>
+      </section>
+
+      <span id="dialog-mark" class="expanded-project-mark" aria-hidden="true"></span>
     </article>
   </dialog>
+
 
   <dialog id="index-dialog" class="index-dialog" aria-labelledby="index-title">
     <button class="dialog-close" type="button" aria-label="Close index">×</button>

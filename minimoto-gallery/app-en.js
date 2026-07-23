@@ -400,12 +400,27 @@ function openProject(project, showModal = true) {
   activeProject = project;
   activeImageIndex = 0;
 
-  document.querySelector("#dialog-kicker").textContent =
-    `${project.id} / ${project.type} / ${project.status}`;
+  const projectNumber = projects.indexOf(project) + 1;
+  const frameAccent = projectNumber % 3 === 0 ? "var(--blue)" : "var(--red)";
+  const markAccent = projectNumber % 2 === 0 ? "var(--blue)" : "var(--red)";
+  const isTextRelic = project.shape === "text-relic";
 
+  const dialogCard = document.querySelector("#dialog-card");
+  dialogCard.className = `expanded-project-card ${project.shape || ""}`;
+  dialogCard.style.setProperty("--dialog-accent", frameAccent);
+  dialogCard.style.setProperty("--dialog-mark-accent", markAccent);
+  dialogCard.style.setProperty(
+    "--dialog-visual",
+    isTextRelic ? "var(--red)" : "var(--black)"
+  );
+
+  document.querySelector("#dialog-id").textContent = project.id;
+  document.querySelector("#dialog-status").textContent = project.status;
+  document.querySelector("#dialog-year").textContent = project.year;
   document.querySelector("#dialog-title").textContent = project.title;
-  document.querySelector("#dialog-artist").textContent =
-    `${project.artist} — ${project.year}`;
+  document.querySelector("#dialog-artist").textContent = project.artist;
+  document.querySelector("#dialog-type").textContent = project.type;
+  document.querySelector("#dialog-mark").textContent = project.mark;
 
   document.querySelector("#dialog-body").innerHTML = project.body;
   document.querySelector("#dialog-tags").innerHTML =
@@ -417,6 +432,12 @@ function openProject(project, showModal = true) {
   if (showModal && !projectDialog.open) {
     projectDialog.showModal();
   }
+
+  requestAnimationFrame(() => {
+    projectDialog.scrollTop = 0;
+    const card = document.querySelector("#dialog-card");
+    if (card) card.scrollTop = 0;
+  });
 }
 
 function renderDialogImage() {
