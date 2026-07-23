@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#d3d2d1">
-  <meta name="description" content="MiniMoto Gallery: position, method, artists and collecting.">
+  <meta name="description" content="MiniMoto Gallery — statement, position and contact.">
   <title>MiniMoto Gallery — About</title>
 
   <link rel="icon" href="./assets/favicon.png" type="image/png">
@@ -14,109 +14,47 @@
   <link rel="stylesheet" href="./quienes-somos.css">
 </head>
 <body>
-  <div class="reading-progress" aria-hidden="true"></div>
-
   <header class="about-header">
-    <a class="about-brand" href="./index-en.html" aria-label="Return to MiniMoto Gallery">
+    <a class="about-brand" href="./index-en.html" aria-label="MiniMoto Gallery">
       <img src="./assets/minimoto-wordmark.png" alt="MiniMoto Gallery">
     </a>
 
-    <nav aria-label="Page navigation">
+    <nav aria-label="Navigation">
       <a class="language-switch" href="./quienes-somos.html" lang="es">ES</a>
       <a href="./index-en.html">Back ×</a>
     </nav>
   </header>
 
-  <main class="about-main">
-    <header class="about-hero">
-      <p class="eyebrow">MINIMOTO / MURCIA / POSITION</p>
-      <h1>A gallery of precise scale.</h1>
-      <p class="about-lead">
-        MiniMoto works with artists whose practices do not need to be simplified in order to be seen.
-      </p>
-      <div class="about-mark" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </div>
-    </header>
+  <main class="statement-page">
+    <figure class="statement-image">
+      <img
+        src="./assets/minimoto-about-2026.webp"
+        alt="Working scene at MiniMoto Gallery, with a person beside an installation in progress."
+      >
+      <figcaption>MINIMOTO GALLERY / LA CENTRAL BAJA / MURCIA / 2026</figcaption>
+      <span class="image-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+    </figure>
 
-    <section class="about-section" aria-labelledby="position">
-      <p class="section-code">01 / POSITION</p>
-      <h2 id="position">Small does not mean provisional.</h2>
-      <div class="section-copy">
-        <p>
-          MiniMoto is a contemporary art gallery in Murcia. It produces exhibitions,
-          residencies and activations through a close relationship with the works and with
-          those who make them.
-        </p>
-        <p>
-          Scale allows precision: reading slowly, deciding carefully and preventing a practice
-          from losing complexity when it becomes public.
-        </p>
-      </div>
-    </section>
+    <article class="statement-panel">
+      <p class="statement-code">MM / POSITION / MURCIA</p>
+      <h1>Before consensus arrives.</h1>
 
-    <section class="about-section" aria-labelledby="method">
-      <p class="section-code">02 / METHOD</p>
-      <h2 id="method">Each project determines its own device.</h2>
-      <div class="section-copy">
-        <p>
-          We do not apply a fixed form. Space, installation, text and circulation are built
-          from the internal logic of each work.
-        </p>
-        <p>
-          Curating also means producing conditions: time, interlocution, context and a public
-          form that does not reduce the work to a quick image.
-        </p>
-      </div>
-    </section>
-
-    <section class="about-section" aria-labelledby="artists">
-      <p class="section-code">03 / ARTISTS</p>
-      <h2 id="artists">Entering MiniMoto is not filling a slot.</h2>
-      <div class="section-copy">
-        <p>
-          It means joining a demanding conversation. We are interested in practices with an
-          internal logic, even when they have not yet found the place from which they can become legible.
-        </p>
-        <p>
-          The gallery accompanies that singularity without correcting it to fit a programme.
-        </p>
-      </div>
-    </section>
-
-    <section class="about-section collector-section" aria-labelledby="collecting">
-      <p class="section-code">04 / COLLECTING</p>
-      <h2 id="collecting">A collection distinguishes before consensus makes things obvious.</h2>
-      <div class="section-copy">
-        <p>
-          Collecting with MiniMoto means entering a practice early, understanding its context
-          and participating in the continuity it needs in order to grow.
-        </p>
-        <p>
-          We work directly and discreetly with people and institutions who understand acquisition
-          as a form of thought, rather than as a late confirmation.
-        </p>
+      <div class="statement-copy">
+          <p>MiniMoto Gallery is a contemporary art gallery based in Murcia, in the Spanish Southeast. It works at the point when a practice is still constructing its language, its scale and the form through which it wants to enter public view.</p>
+          <p>We do not understand the gallery as a neutral background. Each project may alter the space, the installation, the text and the circulation. Exhibitions, residencies and activations are different devices for the same task: producing the conditions a work requires without reducing it to a quick image.</p>
+          <p>We are interested in artists whose practice cannot be summarised as a style or category. MiniMoto’s scale allows for close reading, exact decisions and conversations that continue after an exhibition ends. Entering the gallery does not mean filling a slot, but joining a context that protects singularity and demands precision.</p>
+          <p>For collectors and institutions, MiniMoto offers the possibility of recognising a work before consensus stabilises its value. Acquisition does not appear as an ending, but as a form of continuity: time, trust and the capacity for a practice to keep growing.</p>
       </div>
 
-      <a class="private-contact" href="mailto:minimotogallery@gmail.com?subject=Conversation%20with%20MiniMoto%20Gallery">
-        Begin a private conversation ↗
-      </a>
-    </section>
+      <blockquote>Not small — just too fast and too far.</blockquote>
+
+      <div class="statement-actions">
+        <a class="private-contact" href="mailto:minimotogallery@gmail.com?subject=Conversation%20with%20MiniMoto%20Gallery">
+          Begin a private conversation ↗
+        </a>
+        <p>EXHIBITIONS · RESIDENCIES · ACTIVATIONS<br>SPANISH SOUTHEAST</p>
+      </div>
+    </article>
   </main>
-
-  <footer class="about-footer">
-    <p>MiniMoto Gallery<br>Spanish Southeast</p>
-    <a href="./index-en.html">Return to the project field ↗</a>
-  </footer>
-
-  <script>
-    const progress = document.querySelector(".reading-progress");
-    const updateProgress = () => {
-      const total = document.documentElement.scrollHeight - innerHeight;
-      progress.style.transform = `scaleX(${total > 0 ? scrollY / total : 0})`;
-    };
-    updateProgress();
-    addEventListener("scroll", updateProgress, { passive: true });
-  </script>
 </body>
 </html>
