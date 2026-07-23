@@ -1277,3 +1277,203 @@ dialog::backdrop {
   border-color: var(--black) !important;
   font-weight: 500;
 }
+
+
+/* ================================================================
+   V4 — High Culture / Blue Notes
+   ================================================================ */
+
+:root {
+  --blue: #243cff;
+  --blue-deep: #1729d8;
+  --blue-soft: rgba(36, 60, 255, .14);
+}
+
+/* Direct entry: the project field is now the cover. */
+.battle-section {
+  margin-top: var(--header-h);
+}
+
+.battle-header {
+  min-height: 214px;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, .62fr) auto;
+  align-items: stretch;
+  gap: 0;
+  padding: 0;
+  border-top: 0;
+}
+
+.battle-title-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-width: 0;
+  padding: 26px 24px 28px;
+  border-right: 1px solid var(--mid);
+}
+
+.battle-title-block .section-number {
+  color: var(--blue);
+}
+
+.battle-title-block h2 {
+  margin: 18px 0 0;
+}
+
+.battle-subtitle {
+  max-width: 640px;
+  margin: 16px 0 0;
+  color: rgba(239, 239, 236, .72);
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.battle-about {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px 20px;
+  background: var(--blue);
+  color: var(--white);
+}
+
+.battle-about .section-number {
+  color: rgba(255,255,255,.7);
+}
+
+.battle-about > p:not(.section-number) {
+  margin: 42px 0 30px;
+  font-size: clamp(18px, 1.55vw, 25px);
+  line-height: 1.05;
+  letter-spacing: -.03em;
+}
+
+.battle-about a {
+  width: fit-content;
+  padding-bottom: 3px;
+  border-bottom: 1px solid currentColor;
+  font: 10px/1.2 var(--font-mono);
+  text-transform: uppercase;
+}
+
+.battle-about a:hover,
+.battle-about a:focus-visible {
+  color: var(--black);
+}
+
+.battle-tools {
+  width: 210px;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
+  padding: 20px;
+  border-left: 1px solid var(--mid);
+}
+
+.battle-tools p {
+  margin-bottom: 14px;
+}
+
+.status-dot {
+  background: var(--blue);
+  box-shadow: 0 0 0 5px var(--blue-soft);
+}
+
+.language-link {
+  background: var(--blue);
+  color: var(--white) !important;
+  border-color: var(--blue) !important;
+}
+
+.language-link:hover,
+.language-link:focus-visible {
+  background: var(--black) !important;
+  border-color: var(--black) !important;
+}
+
+/* Blue appears as a note, not as a complete recolouring. */
+.project-card:nth-child(even) .project-mark {
+  background: var(--blue);
+}
+
+.project-card:nth-child(even):hover .project-surface,
+.project-card:nth-child(even):focus-within .project-surface {
+  box-shadow: 20px 20px 0 var(--blue);
+}
+
+.project-card:nth-child(3n) .project-index {
+  color: var(--blue);
+}
+
+.project-card:nth-child(3n) .project-surface {
+  border-color: var(--blue);
+}
+
+.board-instruction {
+  background: var(--blue);
+}
+
+.dialog-kicker {
+  color: var(--blue);
+}
+
+.dialog-body blockquote {
+  border-left-color: var(--blue);
+}
+
+.gallery-arrow {
+  background: var(--blue);
+}
+
+#related-list button:hover {
+  background: var(--blue);
+}
+
+@media (max-width: 1160px) {
+  .battle-header {
+    grid-template-columns: minmax(0, 1fr) minmax(250px, .55fr);
+  }
+
+  .battle-tools {
+    width: auto;
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--mid);
+    border-left: 0;
+  }
+
+  .battle-tools p {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .battle-section {
+    margin-top: var(--header-h);
+  }
+
+  .battle-header {
+    grid-template-columns: 1fr;
+  }
+
+  .battle-title-block {
+    min-height: 210px;
+    border-right: 0;
+  }
+
+  .battle-about {
+    min-height: 220px;
+  }
+
+  .battle-tools {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .battle-tools p {
+    margin-bottom: 12px;
+  }
+}

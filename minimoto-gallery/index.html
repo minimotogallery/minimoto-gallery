@@ -30,7 +30,7 @@
     <nav id="primary-nav" class="primary-nav" aria-label="Navegación principal">
       <a href="#battle-ground">Proyectos</a>
       <a class="language-link" href="./index-en.html" lang="en" aria-label="View website in English">EN</a>
-      <a href="./quienes-somos.html" target="_blank" rel="noopener noreferrer">Quiénes somos ↗</a>
+      <a href="./quienes-somos.html" target="_blank" rel="noopener noreferrer">Conocernos ↗</a>
       <button id="artists-open" type="button">Artistas</button>
       <button id="index-open" type="button">Índice</button>
       <button id="remix" type="button">Reordenar tablero</button>
@@ -39,41 +39,33 @@
   </header>
 
   <main id="top">
-    <section class="intro" aria-labelledby="intro-title">
-      <p class="micro-label">MINIMOTO GALLERY / MURCIA / 2026 / MM–ORDO–006</p>
-
-      <h1 id="intro-title">
-        <span>Battle</span>
-        <span class="neo-word">ground</span>
-      </h1>
-
-      <div class="intro-aside" aria-label="Descripción breve">
-        <span class="sigil-text" aria-hidden="true">✣</span>
-        <p>Exposiciones · residencias · activaciones · fricción entre prácticas.</p>
-      </div>
-
-      <div class="intro-coordinate" aria-hidden="true">
-        37°59′N / 1°07′W<br>
-        <span>scriptorium operativo</span>
-      </div>
-
-      <img class="intro-sigil" src="./assets/minimoto-sigil.png" alt="" aria-hidden="true">
-    </section>
 
     <section class="battle-section" aria-labelledby="battle-title">
       <header class="battle-header">
-        <div>
-          <p class="section-number">I / TABULA</p>
+        <div class="battle-title-block">
+          <p class="section-number">I / BATTLE GROUND</p>
           <h2 id="battle-title">Campo de proyectos</h2>
+          <p class="battle-subtitle">Exposiciones, procesos, activaciones y restos en circulación.</p>
         </div>
+
+        <aside class="battle-about" aria-label="Acerca de MiniMoto">
+          <p class="section-number">II / ACERCA</p>
+          <p>Una galería pequeña solo en escala. Trabajamos cerca de las obras y de quienes las hacen.</p>
+          <a
+            href="./quienes-somos.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Conocernos ↗
+          </a>
+        </aside>
 
         <div class="battle-tools" aria-label="Herramientas del tablero">
           <p><span class="status-dot" aria-hidden="true"></span> tablero activo</p>
           <button id="reset-layout" type="button">Restaurar orden</button>
         </div>
       </header>
-
-      <div id="battle-ground" class="battle-ground" aria-label="Tablero interactivo de proyectos">
+<div id="battle-ground" class="battle-ground" aria-label="Tablero interactivo de proyectos">
         <div class="board-grid" aria-hidden="true"></div>
         <div class="board-cross cross-a" aria-hidden="true"></div>
         <div class="board-cross cross-b" aria-hidden="true"></div>
@@ -85,25 +77,6 @@
         <div id="project-layer" class="project-layer" role="list"></div>
       </div>
     </section>
-
-    <section class="about-gateway" aria-labelledby="about-gateway-title">
-      <p class="section-number">II / LIBER</p>
-      <div class="about-gateway-grid">
-        <h2 id="about-gateway-title">Acerca de MiniMoto</h2>
-        <p>
-          Una galería pequeña solo en escala. El resto sucede en otra medida.
-        </p>
-        <a
-          class="about-scroll-link"
-          href="./quienes-somos.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Abrir pergamino ↗
-        </a>
-      </div>
-    </section>
-
 </main>
 
   <footer class="site-footer">
