@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#282828">
+  <meta name="description" content="MiniMoto Gallery——位于西班牙东南部的当代艺术画廊，开展展览、驻留、激活行动与艺术项目。">
+  <title>MiniMoto Gallery — 项目场域</title>
+
+  <link rel="icon" href="./assets/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wdth,wght@75..100,400..700&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./minimoto-zh.css">
+  <link rel="alternate" hreflang="es" href="./index.html">
+  <link rel="alternate" hreflang="en" href="./index-en.html">
+  <link rel="alternate" hreflang="zh-CN" href="./index-zh.html">
+  <link rel="alternate" hreflang="x-default" href="./index.html">
+  <script src="./app-zh.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#battle-ground">跳至项目场域</a>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="MiniMoto Gallery，首页">
+      <img src="./assets/minimoto-wordmark.png" alt="MiniMoto Gallery">
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      菜单
+    </button>
+
+    <nav id="primary-nav" class="primary-nav" aria-label="主导航">
+      <a href="#battle-ground">项目</a>
+      <a href="./index.html" lang="es" aria-label="查看西班牙语版本">ES</a>
+      <a class="language-link" href="./index-en.html" lang="en" aria-label="View website in English">EN</a>
+      <a href="./quienes-somos-zh.html" target="_blank" rel="noopener noreferrer">关于我们 ↗</a>
+      <button id="artists-open" type="button">艺术家</button>
+      <button id="index-open" type="button">索引</button>
+      <button id="remix" type="button">重排场域</button>
+      <a href="mailto:minimotogallery@gmail.com">联系 ↗</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="battle-section" aria-labelledby="battle-title">
+      <header class="battle-header">
+        <div class="battle-title-block">
+          <p class="section-number">I / BATTLE GROUND</p>
+          <h2 id="battle-title">项目场域</h2>
+          <p class="battle-subtitle">展览、过程、激活行动，以及仍在流通的残余。</p>
+        </div>
+
+        <aside class="battle-about" aria-label="关于 MiniMoto">
+          <p class="section-number">II / 关于</p>
+          <p>一间只在尺度上显得小的画廊。我们贴近作品，也贴近创作者。</p>
+          <a
+            href="./quienes-somos-zh.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            认识 MiniMoto ↗
+          </a>
+        </aside>
+
+        <div class="battle-tools" aria-label="场域工具">
+          <p><span class="status-dot" aria-hidden="true"></span> 场域运行中</p>
+          <button id="reset-layout" type="button">恢复原位</button>
+        </div>
+      </header>
+
+      <div id="battle-ground" class="battle-ground" aria-label="可交互的项目场域">
+        <div class="board-grid" aria-hidden="true"></div>
+        <div class="board-cross cross-a" aria-hidden="true"></div>
+        <div class="board-cross cross-b" aria-hidden="true"></div>
+        <p class="board-instruction">
+          <span>点击：放大</span>
+          <span>拖柄 ⠿：移动</span>
+          <span>按钮：重排</span>
+        </p>
+        <div id="project-layer" class="project-layer" role="list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <img src="./assets/minimoto-sigil.png" alt="" aria-hidden="true">
+    <p>MiniMoto Gallery<br>西班牙东南部</p>
+    <div>
+      <a href="https://www.instagram.com/minimotogallery/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+      <a href="mailto:minimotogallery@gmail.com">电子邮件 ↗</a>
+    </div>
+    <p id="local-time" class="footer-time">--:--:-- / 穆尔西亚</p>
+  </footer>
+
+  <dialog id="project-dialog" class="project-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="关闭项目">×</button>
+
+    <article id="dialog-card" class="expanded-project-card">
+      <header class="expanded-project-head">
+        <span id="dialog-id" class="expanded-project-id"></span>
+        <span id="dialog-status"></span>
+        <span id="dialog-year" class="expanded-project-year"></span>
+      </header>
+
+      <div class="expanded-project-visual">
+        <figure class="expanded-project-figure">
+          <img id="dialog-image" src="" alt="">
+          <figcaption>
+            <span id="image-count">01 / 01</span>
+            <span id="image-caption"></span>
+          </figcaption>
+        </figure>
+
+        <button class="gallery-arrow gallery-prev" type="button" aria-label="上一张图片">←</button>
+        <button class="gallery-arrow gallery-next" type="button" aria-label="下一张图片">→</button>
+      </div>
+
+      <section class="expanded-project-title">
+        <h2 id="dialog-title"></h2>
+        <p>
+          <span id="dialog-artist"></span>
+          <span aria-hidden="true"> / </span>
+          <span id="dialog-type"></span>
+        </p>
+      </section>
+
+      <section class="expanded-project-info">
+        <div id="dialog-body" class="dialog-body"></div>
+        <div class="expanded-project-aside">
+          <div id="dialog-tags" class="dialog-tags"></div>
+
+          <section class="related-projects" aria-labelledby="related-title">
+            <h3 id="related-title">同一星座</h3>
+            <div id="related-list"></div>
+          </section>
+        </div>
+      </section>
+
+      <span id="dialog-mark" class="expanded-project-mark" aria-hidden="true"></span>
+    </article>
+  </dialog>
+
+  <dialog id="index-dialog" class="index-dialog" aria-labelledby="index-title">
+    <button class="dialog-close" type="button" aria-label="关闭索引">×</button>
+    <header>
+      <p class="section-number">INDEX / MM</p>
+      <h2 id="index-title">运作档案</h2>
+    </header>
+    <ol id="project-index-list"></ol>
+  </dialog>
+
+  <dialog id="artists-dialog" class="artists-dialog" aria-labelledby="artists-title">
+    <button class="dialog-close" type="button" aria-label="关闭艺术家列表">×</button>
+    <header>
+      <p class="section-number">ORDO / PERSONAE</p>
+      <h2 id="artists-title">艺术家与协作者</h2>
+    </header>
+    <div id="artists-list"></div>
+  </dialog>
+</body>
+</html>
