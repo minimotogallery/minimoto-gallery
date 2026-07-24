@@ -499,3 +499,78 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ================================================================
+   Typography refinement — current title + project field
+   ================================================================ */
+.display-title {
+  margin: 0;
+  text-wrap: balance;
+}
+
+.display-title .display-line {
+  display: block;
+}
+
+.current-program-copy .display-title--current {
+  max-width: 11.6ch;
+  margin: 18px 0 16px;
+  font-size: clamp(50px, 6.15vw, 110px);
+  font-weight: 635;
+  font-stretch: 92%;
+  line-height: .82;
+  letter-spacing: -.045em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.current-program-copy .display-title--current .display-line {
+  transform: translateX(0);
+}
+
+.current-program-copy .display-title--current .display-line:first-child {
+  letter-spacing: -.05em;
+}
+
+.current-program-copy .display-title--current .display-line--accent {
+  font-size: .92em;
+  font-stretch: 95%;
+  letter-spacing: -.036em;
+}
+
+.battle-title-block .display-title--field {
+  max-width: 8.4ch;
+  margin: 18px 0 0;
+  font-size: clamp(58px, 7.6vw, 120px);
+  font-weight: 615;
+  font-stretch: 90%;
+  line-height: .84;
+  letter-spacing: -.048em;
+  text-transform: none;
+  text-wrap: balance;
+}
+
+.battle-title-block .display-title--field .display-line:first-child {
+  letter-spacing: -.052em;
+}
+
+.battle-title-block .display-title--field .display-line--accent {
+  font-size: .93em;
+  font-stretch: 93%;
+  letter-spacing: -.034em;
+}
+
+@media (max-width: 720px) {
+  .current-program-copy .display-title--current {
+    font-size: clamp(46px, 13vw, 82px);
+    line-height: .85;
+    max-width: 10.4ch;
+  }
+
+  .battle-title-block .display-title--field {
+    font-size: clamp(48px, 14vw, 78px);
+    line-height: .86;
+    max-width: 8.8ch;
+  }
+}
