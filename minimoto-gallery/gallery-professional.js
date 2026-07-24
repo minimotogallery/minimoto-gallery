@@ -363,8 +363,8 @@
         <p>${data.documentation}</p>
       </div>
       <div class="project-professional-actions">
-        <a href="mailto:minimotogallery@gmail.com?subject=${subject}%20/%20dossier">${copy.dossier}</a>
-        <a href="mailto:minimotogallery@gmail.com?subject=${subject}%20/%20availability">${copy.availability}</a>
+        <a href="mailto:minimoto.studio@gmail.com?subject=${subject}%20/%20dossier">${copy.dossier}</a>
+        <a href="mailto:minimoto.studio@gmail.com?subject=${subject}%20/%20availability">${copy.availability}</a>
       </div>
     `;
   }
@@ -406,7 +406,7 @@
           <p>${artist.bio}</p>
           <div class="artist-entry-focus">${artist.focus.map(item => `<span>${item}</span>`).join("")}</div>
           <div class="artist-entry-projects">${projectButtons}</div>
-          <a href="mailto:minimotogallery@gmail.com?subject=${subject}">${copy.artistInfo}</a>
+          <a href="mailto:minimoto.studio@gmail.com?subject=${subject}">${copy.artistInfo}</a>
         </div>
       `;
       root.append(article);
