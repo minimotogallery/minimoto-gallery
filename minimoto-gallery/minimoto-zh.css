@@ -118,3 +118,13 @@ html[lang="zh-CN"] .statement-image figcaption {
     font-size: 16px;
   }
 }
+
+
+html[lang="zh-CN"] .statement-lead--top {
+  letter-spacing: .02em !important;
+  line-height: .98;
+}
+
+html[lang="zh-CN"] .statement-lead--bottom {
+  line-height: 1.28;
+}
