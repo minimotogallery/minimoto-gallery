@@ -13,7 +13,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./professional.css">
   <script src="./app-en.js" defer></script>
+  <script src="./gallery-professional.js" defer></script>
   <link rel="alternate" hreflang="es" href="./index.html">
   <link rel="alternate" hreflang="en" href="./index-en.html">
   <link rel="alternate" hreflang="zh-CN" href="./index-zh.html">
@@ -32,18 +34,40 @@
     </button>
 
     <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+      <a href="#now">Now</a>
       <a href="#battle-ground">Projects</a>
+      <button id="artists-open" type="button">Artists</button>
+      <a href="#gallery">Gallery</a>
+      <button id="index-open" type="button">Index</button>
+      <button id="remix" type="button">Remix</button>
       <a class="language-link" href="./index.html" lang="es" aria-label="Ver la web en español">ES</a>
       <a href="./index-zh.html" lang="zh-CN" aria-label="查看中文版网站">中文</a>
       <a href="./quienes-somos-en.html" target="_blank" rel="noopener noreferrer">About ↗</a>
-      <button id="artists-open" type="button">Artists</button>
-      <button id="index-open" type="button">Index</button>
-      <button id="remix" type="button">Remix board</button>
       <a href="mailto:minimotogallery@gmail.com">Contact ↗</a>
     </nav>
   </header>
 
   <main id="top">
+
+<section class="current-program" id="now" aria-labelledby="current-title">
+  <div class="current-program-rail">
+    <p class="section-number">NOW / MM-002</p>
+    <p class="current-program-status"><span aria-hidden="true"></span> In production</p>
+  </div>
+  <div class="current-program-main">
+    <div class="current-program-copy">
+      <p class="current-program-label">Upcoming activation</p>
+      <h1 id="current-title">Exercises for Unification</h1>
+      <p class="current-program-meta">Joel Blanco · activation / exhibition · 2026</p>
+    </div>
+    <div class="current-program-actions">
+      <button type="button" data-open-project="MM-002">Open project ↗</button>
+      <a href="mailto:minimotogallery@gmail.com?subject=Dossier%20%E2%80%94%20Exercises%20for%20Unification">Request dossier ↗</a>
+      <a href="mailto:minimotogallery@gmail.com?subject=Visit%20MiniMoto%20Gallery">Visit by appointment ↗</a>
+    </div>
+  </div>
+  <p class="current-program-note">Bedroom micromythologies, digital assets and a masculine epic displaced towards minimal objects. The project moves between activation, minimoto joust and exhibition.</p>
+</section>
 
     <section class="battle-section" aria-labelledby="battle-title">
       <header class="battle-header">
@@ -55,7 +79,7 @@
 
         <aside class="battle-about" aria-label="About MiniMoto">
           <p class="section-number">II / ABOUT</p>
-          <p>A gallery small only in scale. We work close to the works and to those who make them.</p>
+          <p>A gallery of close scale and fast circulation. We work close to the works and to those who make them.</p>
           <a
             href="./quienes-somos-en.html"
             target="_blank"
@@ -70,6 +94,15 @@
           <button id="reset-layout" type="button">Restore order</button>
         </div>
       </header>
+<div class="project-filterbar" aria-label="Filter the project field">
+  <p class="section-number">READING / FILTER</p>
+  <div role="group" aria-label="Project categories">
+    <button class="is-active" type="button" data-project-filter="all" aria-pressed="true">All</button>
+    <button type="button" data-project-filter="exhibitions" aria-pressed="false">Exhibitions</button>
+    <button type="button" data-project-filter="artists" aria-pressed="false">Practices</button>
+    <button type="button" data-project-filter="research" aria-pressed="false">Research</button>
+  </div>
+</div>
 <div id="battle-ground" class="battle-ground" aria-label="Interactive project board">
         <div class="board-grid" aria-hidden="true"></div>
         <div class="board-cross cross-a" aria-hidden="true"></div>
@@ -82,6 +115,26 @@
         <div id="project-layer" class="project-layer" role="list"></div>
       </div>
     </section>
+
+<section class="gallery-framework" id="gallery" aria-labelledby="gallery-framework-title">
+  <header class="gallery-framework-head">
+    <p class="section-number">III / STRUCTURE</p>
+    <div>
+      <h2 id="gallery-framework-title">Singularity needs infrastructure.</h2>
+      <p>MiniMoto does not merely display results. It produces the conditions through which a practice can find public form, documentation, circulation and continuity.</p>
+    </div>
+  </header>
+  <div class="gallery-framework-grid">
+    <article><span>01</span><h3>Production</h3><p>Residencies, curatorial accompaniment and first public forms developed in close proximity to the work.</p></article>
+    <article><span>02</span><h3>Circulation</h3><p>Documentation, exhibitions and the movement of projects towards other spaces and territories.</p></article>
+    <article><span>03</span><h3>Collections and institutions</h3><p>Private information on works, visits by appointment and support for acquisitions and collaborations.</p></article>
+  </div>
+  <div class="gallery-framework-actions">
+    <button type="button" data-open-artists>View artists and agents ↗</button>
+    <a href="mailto:minimotogallery@gmail.com?subject=General%20dossier%20%E2%80%94%20MiniMoto%20Gallery">Request general dossier ↗</a>
+    <a href="mailto:minimotogallery@gmail.com?subject=Works%20and%20availability%20%E2%80%94%20MiniMoto%20Gallery">Ask about works and availability ↗</a>
+  </div>
+</section>
 </main>
 
   <footer class="site-footer">
