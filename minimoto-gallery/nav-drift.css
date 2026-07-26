@@ -1,0 +1,175 @@
+/* ================================================================
+   MiniMoto Gallery — active navigation / liquid skid
+   ================================================================ */
+
+:root {
+  --nav-drift-blue: #243cff;
+  --nav-drift-blue-deep: #1729d8;
+}
+
+.primary-nav {
+  overflow: visible;
+}
+
+.primary-nav .drift-link {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  border-color: transparent !important;
+  background: transparent !important;
+  color: var(--black);
+  transition: color 160ms ease, transform 180ms cubic-bezier(.2,.8,.2,1);
+}
+
+.primary-nav .drift-link > span {
+  position: relative;
+  z-index: 3;
+  display: inline-block;
+  white-space: nowrap;
+  transition: color 160ms ease, transform 260ms cubic-bezier(.2,.85,.2,1), letter-spacing 220ms ease;
+}
+
+/* The blue mass: a skid mark rather than a conventional tab. */
+.primary-nav .drift-link::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 5px 3px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(-11px, 0, 0) scaleX(.34) scaleY(.72) skewX(-12deg);
+  transform-origin: left center;
+  border-radius: 42% 58% 54% 46% / 58% 38% 62% 42%;
+  background:
+    radial-gradient(70% 120% at 20% 20%, rgba(255,255,255,.28), rgba(255,255,255,0) 45%),
+    linear-gradient(105deg, var(--nav-drift-blue-deep), var(--nav-drift-blue) 52%, #4054ff);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.08);
+  transition:
+    opacity 180ms ease,
+    transform 360ms cubic-bezier(.18,.86,.2,1.05),
+    border-radius 300ms ease;
+}
+
+/* A short fading tail gives direction without crowding adjacent links. */
+.primary-nav .drift-link::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: -7px;
+  top: 50%;
+  width: 22px;
+  height: 2px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%) scaleX(.2);
+  transform-origin: right center;
+  background: linear-gradient(90deg, rgba(36,60,255,0), rgba(36,60,255,.78));
+  transition: opacity 160ms ease, transform 280ms ease;
+}
+
+.primary-nav .drift-link:hover,
+.primary-nav .drift-link:focus-visible {
+  border-color: transparent !important;
+  background: transparent !important;
+}
+
+.primary-nav .drift-link:hover::before,
+.primary-nav .drift-link:focus-visible::before {
+  opacity: .16;
+  transform: translate3d(-2px, 0, 0) scaleX(.9) scaleY(.86) skewX(-5deg);
+}
+
+.primary-nav .drift-link:hover > span,
+.primary-nav .drift-link:focus-visible > span {
+  transform: translateY(-1px);
+}
+
+.primary-nav .drift-link.is-active {
+  color: #fff;
+}
+
+.primary-nav .drift-link.is-active::before {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scaleX(1) scaleY(1) skewX(-2deg);
+  border-radius: 34% 66% 48% 52% / 60% 42% 58% 40%;
+}
+
+.primary-nav .drift-link.is-active::after {
+  opacity: .72;
+  transform: translateY(-50%) scaleX(1);
+}
+
+.primary-nav .drift-link.is-active > span {
+  color: #fff;
+  letter-spacing: .025em;
+}
+
+.primary-nav .drift-link.is-skidding::before {
+  animation: mmNavSkid 430ms cubic-bezier(.18,.86,.2,1) both;
+}
+
+.primary-nav .drift-link.is-skidding::after {
+  animation: mmNavTrail 430ms ease-out both;
+}
+
+.primary-nav .drift-link.is-skidding > span {
+  animation: mmNavText 430ms cubic-bezier(.18,.86,.2,1) both;
+}
+
+@keyframes mmNavSkid {
+  0% {
+    opacity: .08;
+    transform: translate3d(-18px, 1px, 0) scaleX(.16) scaleY(.62) skewX(-18deg);
+    border-radius: 62% 38% 72% 28% / 55% 30% 70% 45%;
+  }
+  44% {
+    opacity: 1;
+    transform: translate3d(3px, 0, 0) scaleX(1.12) scaleY(1.03) skewX(-7deg);
+    border-radius: 26% 74% 40% 60% / 65% 36% 64% 35%;
+  }
+  68% {
+    transform: translate3d(-1px, 0, 0) scaleX(.96) scaleY(.98) skewX(-1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scaleX(1) scaleY(1) skewX(-2deg);
+    border-radius: 34% 66% 48% 52% / 60% 42% 58% 40%;
+  }
+}
+
+@keyframes mmNavTrail {
+  0% { opacity: 0; transform: translateY(-50%) scaleX(.1); }
+  35% { opacity: .9; transform: translateY(-50%) scaleX(1.3); }
+  100% { opacity: .72; transform: translateY(-50%) scaleX(1); }
+}
+
+@keyframes mmNavText {
+  0% { transform: translateX(-4px) rotate(-.6deg); }
+  48% { transform: translateX(2px) rotate(.25deg); }
+  100% { transform: translateX(0) rotate(0); }
+}
+
+/* Chinese needs less artificial tracking. */
+html[lang="zh-CN"] .primary-nav .drift-link.is-active > span {
+  letter-spacing: 0;
+}
+
+@media (max-width: 980px) {
+  .primary-nav .drift-link::before {
+    inset: 4px 1px;
+  }
+
+  .primary-nav .drift-link::after {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primary-nav .drift-link,
+  .primary-nav .drift-link::before,
+  .primary-nav .drift-link::after,
+  .primary-nav .drift-link > span {
+    transition: none !important;
+    animation: none !important;
+  }
+}

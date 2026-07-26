@@ -14,8 +14,10 @@
 
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./professional.css">
+  <link rel="stylesheet" href="./nav-drift.css">
   <script src="./app.js" defer></script>
   <script src="./gallery-professional.js" defer></script>
+  <script src="./nav-drift.js" defer></script>
   <link rel="alternate" hreflang="es" href="./index.html">
   <link rel="alternate" hreflang="en" href="./index-en.html">
   <link rel="alternate" hreflang="zh-CN" href="./index-zh.html">
@@ -34,15 +36,15 @@
     </button>
 
     <nav id="primary-nav" class="primary-nav" aria-label="Navegación principal">
-      <a href="#ahora">Ahora</a>
-      <a href="#battle-ground">Proyectos</a>
-      <button id="artists-open" type="button">Artistas</button>
-      <a href="#galeria">Galería</a>
-      <button id="index-open" type="button">Índice</button>
+      <a class="drift-link" data-drift-section="ahora" href="#ahora"><span>Ahora</span></a>
+      <a class="drift-link" data-drift-section="battle-ground" href="#battle-ground"><span>Proyectos</span></a>
+      <button class="drift-link" id="artists-open" type="button" data-drift-dialog="artists-dialog"><span>Artistas</span></button>
+      <a class="drift-link" data-drift-section="galeria" href="#galeria"><span>Galería</span></a>
+      <button class="drift-link" id="index-open" type="button" data-drift-dialog="index-dialog"><span>Índice</span></button>
       <button id="remix" type="button">Remix</button>
       <a class="language-link" href="./index-en.html" lang="en" aria-label="View website in English">EN</a>
       <a href="./index-zh.html" lang="zh-CN" aria-label="查看中文版网站">中文</a>
-      <a href="./quienes-somos.html" target="_blank" rel="noopener noreferrer">Acerca ↗</a>
+      <a class="drift-link drift-link--transient" href="./quienes-somos.html" target="_blank" rel="noopener noreferrer"><span>Acerca ↗</span></a>
       <a href="mailto:minimoto.studio@gmail.com">Contacto ↗</a>
     </nav>
   </header>
