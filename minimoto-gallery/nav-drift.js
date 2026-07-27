@@ -12,7 +12,7 @@
     link.classList.remove("is-skidding");
     void link.offsetWidth;
     link.classList.add("is-skidding");
-    window.setTimeout(() => link.classList.remove("is-skidding"), 460);
+    window.setTimeout(() => link.classList.remove("is-skidding"), 340);
   }
 
   function activate(link, animate = false) {
@@ -65,7 +65,7 @@
 
   transientLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      window.setTimeout(syncToScroll, 520);
+      window.setTimeout(syncToScroll, 380);
     });
   });
 
@@ -92,6 +92,7 @@
         syncToScroll();
       }
     });
+
     observer.observe(dialog, { attributes: true, attributeFilter: ["open"] });
   });
 
