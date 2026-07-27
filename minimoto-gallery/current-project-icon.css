@@ -1,0 +1,54 @@
+/* MiniMoto — icono del proyecto actual */
+
+.current-project-sign {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  margin: 0 0 2px;
+}
+
+.current-project-sign .current-program-label {
+  margin: 0;
+}
+
+.current-project-sign img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex: 0 0 auto;
+  image-rendering: pixelated;
+  transform-origin: 50% 78%;
+  animation: justa-engine-idle 180ms steps(2, end) infinite;
+  will-change: transform;
+}
+
+/*
+  Vibración muy contenida:
+  menos de un píxel de desplazamiento y menos de medio grado.
+*/
+@keyframes justa-engine-idle {
+  0%   { transform: translate3d(0, 0, 0) rotate(-0.22deg); }
+  25%  { transform: translate3d(.55px, -.35px, 0) rotate(.16deg); }
+  50%  { transform: translate3d(-.45px, .3px, 0) rotate(-.12deg); }
+  75%  { transform: translate3d(.35px, .15px, 0) rotate(.2deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(-.22deg); }
+}
+
+@media (max-width: 720px) {
+  .current-project-sign {
+    gap: 8px;
+  }
+
+  .current-project-sign img {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .current-project-sign img {
+    animation: none;
+  }
+}
