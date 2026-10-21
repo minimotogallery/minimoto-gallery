@@ -1,0 +1,71 @@
+:root { --minimoto-blue: #243cff; }
+
+.brand.logo-motion,
+.about-brand.logo-motion {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+}
+
+.logo-motion > img {
+  position: relative;
+  z-index: 1;
+  transform: none !important;
+}
+
+.logo-motion-mask {
+  position: absolute;
+  z-index: 2;
+  top: -2px;
+  right: -2px;
+  width: 13.7%;
+  height: calc(100% + 4px);
+  background: var(--paper, #fbfbfa);
+  pointer-events: none;
+}
+
+.logo-motion-dots {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  width: 12.8%;
+  height: 100%;
+  pointer-events: none;
+  transform-origin: 50% 50%;
+  color: currentColor;
+}
+
+.logo-motion-dots i {
+  position: absolute;
+  width: clamp(5px, 1.15vw, 10px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #1c1c1c;
+  transition: background-color .18s ease, transform .18s ease;
+}
+
+.logo-motion-dots i:nth-child(1) { left: 4%; top: 7%; }
+.logo-motion-dots i:nth-child(2) { right: 3%; top: 7%; }
+.logo-motion-dots i:nth-child(3) { left: 50%; bottom: 4%; transform: translateX(-50%); }
+
+.logo-motion.is-logo-near .logo-motion-dots {
+  animation: minimoto-dots-orbit .9s cubic-bezier(.3,.75,.2,1) infinite;
+}
+
+.logo-motion.is-logo-near .logo-motion-dots i {
+  background: var(--minimoto-blue);
+}
+
+@keyframes minimoto-dots-orbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-motion.is-logo-near .logo-motion-dots { animation: none; }
+}
+
+@media (max-width: 650px) {
+  .logo-motion-dots i { width: 6px; }
+}

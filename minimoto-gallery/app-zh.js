@@ -183,71 +183,7 @@ const projects = [
     shape: "shape-codex",
     mark: "quest"
   },
-  {
-    id: "MM-003",
-    group: "circulacion",
-    title: "流通",
-    artist: "MiniMoto / RE·UTOPÍA",
-    year: "2026",
-    type: "网络 / 地域",
-    status: "开放过程",
-    images: [
-      {
-        src: "./assets/logo-triple-dots.svg",
-        alt: "MiniMoto Gallery 的三点符号。",
-        caption: "MiniMoto / 流通图"
-      }
-    ],
-    body: `
-      <p>一张连接研究、生产、展览与地域的移动网络。</p>
-      <p>MiniMoto 作为中转点、中间尺度与调解装置出现。</p>
-    `,
-    tags: ["流通", "RE/UTOPÍA", "档案", "地域"],
-    x: "14%",
-    y: "53%",
-    w: "29vw",
-    maxW: 480,
-    ratio: "16 / 9",
-    rotation: "-1.7deg",
-    mobileRotation: "-1deg",
-    shape: "text-relic",
-    mark: "ordo"
-  },
-  {
-    id: "MM-004",
-    group: "identidad",
-    title: "这不是一个白盒子",
-    artist: "MiniMoto Gallery",
-    year: "2026",
-    type: "立场",
-    status: "装置规则",
-    images: [
-      {
-        src: "./assets/logo-triple-dots.svg",
-        alt: "MiniMoto Gallery 标志。",
-        caption: "MiniMoto / 立场"
-      },
-      {
-        src: "./assets/logo-triple-dots.svg",
-        alt: "MiniMoto Gallery 的三点符号。",
-        caption: "MiniMoto / 符号"
-      }
-    ],
-    body: `
-      <p>MiniMoto 从尺度、邻近性，以及项目之间的摩擦展开工作。</p>
-      <p>每一次展览都会改变装置，并为下一次留下残余。</p>
-    `,
-    tags: ["场域特定", "调解", "东南部", "装置"],
-    x: "52%",
-    y: "68%",
-    w: "27vw",
-    maxW: 460,
-    ratio: "5 / 2",
-    rotation: "2.1deg",
-    mobileRotation: "1.2deg",
-    shape: "text-relic",
-    mark: "regula"
-  }
+
 ];
 
 const artistProfiles = [

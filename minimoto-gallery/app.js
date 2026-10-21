@@ -183,71 +183,7 @@ const projects = [
     shape: "shape-codex",
     mark: "quest"
   },
-  {
-    id: "MM-003",
-    group: "circulacion",
-    title: "Circulación",
-    artist: "MiniMoto / RE·UTOPÍA",
-    year: "2026",
-    type: "Red / territorio",
-    status: "Proceso abierto",
-    images: [
-      {
-        src: "./assets/logo-triple-dots.svg",
-        alt: "Símbolo de tres puntos de MiniMoto Gallery.",
-        caption: "MiniMoto / diagrama de circulación"
-      }
-    ],
-    body: `
-      <p>Una red de desplazamientos entre investigación, producción, exposición y territorio.</p>
-      <p>MiniMoto aparece como punto de paso, escala intermedia y artefacto de mediación.</p>
-    `,
-    tags: ["Circulación", "RE/UTOPÍA", "Archivo", "Territorio"],
-    x: "14%",
-    y: "53%",
-    w: "29vw",
-    maxW: 480,
-    ratio: "16 / 9",
-    rotation: "-1.7deg",
-    mobileRotation: "-1deg",
-    shape: "text-relic",
-    mark: "ordo"
-  },
-  {
-    id: "MM-004",
-    group: "identidad",
-    title: "No es un cubo blanco",
-    artist: "MiniMoto Gallery",
-    year: "2026",
-    type: "Posición",
-    status: "Regla del dispositivo",
-    images: [
-      {
-        src: "./assets/logo-triple-dots.svg",
-        alt: "Logotipo de MiniMoto Gallery.",
-        caption: "MiniMoto / posición"
-      },
-      {
-        src: "./assets/logo-triple-dots.svg",
-        alt: "Símbolo de tres puntos de MiniMoto Gallery.",
-        caption: "MiniMoto / sigilo"
-      }
-    ],
-    body: `
-      <p>MiniMoto trabaja con la escala, la proximidad y la fricción entre proyectos.</p>
-      <p>Cada exposición altera el dispositivo y deja restos para la siguiente.</p>
-    `,
-    tags: ["Site-specific", "Mediación", "Sureste", "Dispositivo"],
-    x: "52%",
-    y: "68%",
-    w: "27vw",
-    maxW: 460,
-    ratio: "5 / 2",
-    rotation: "2.1deg",
-    mobileRotation: "1.2deg",
-    shape: "text-relic",
-    mark: "regula"
-  }
+
 ];
 
 const artistProfiles = [

@@ -5,7 +5,7 @@
 
   const copy = {
     es: {
-      circulationTitle: "Circulación y documentación",
+      circulationTitle: "Información y documentación",
       documentation: "Documentación",
       dossier: "Solicitar dossier ↗",
       availability: "Consultar obra y disponibilidad ↗",
@@ -14,7 +14,7 @@
       projectPrefix: "Proyecto"
     },
     en: {
-      circulationTitle: "Circulation and documentation",
+      circulationTitle: "Information and documentation",
       documentation: "Documentation",
       dossier: "Request dossier ↗",
       availability: "Ask about works and availability ↗",
@@ -23,7 +23,7 @@
       projectPrefix: "Project"
     },
     zh: {
-      circulationTitle: "流通与文献",
+      circulationTitle: "信息与文献",
       documentation: "文献",
       dossier: "索取项目资料 ↗",
       availability: "咨询作品与可获得性 ↗",
@@ -38,8 +38,6 @@
     "MM-001/A": "artists",
     "MM-001/B": "artists",
     "MM-002": "exhibitions",
-    "MM-003": "research",
-    "MM-004": "research",
     "MM-005": "exhibitions"
   };
 
@@ -76,21 +74,6 @@
           "Próxima exposición individual · Centro Párraga"
         ],
         documentation: "Proyecto en producción. Dossier de trabajo y condiciones de colaboración disponibles bajo consulta."
-      },
-      "MM-003": {
-        circulation: [
-          "Investigación y red · RE/UTOPÍA",
-          "Territorios · Murcia / Madrid",
-          "Mediación y archivo · MiniMoto Gallery"
-        ],
-        documentation: "Mapa de colaboraciones y memoria del proceso disponibles bajo consulta."
-      },
-      "MM-004": {
-        circulation: [
-          "Posición institucional · MiniMoto Gallery",
-          "Archivo y metodología del dispositivo"
-        ],
-        documentation: "Statement, identidad y metodología expositiva disponibles bajo consulta."
       },
       "MM-005": {
         circulation: [
@@ -134,21 +117,6 @@
         ],
         documentation: "Project in production. Working dossier and collaboration conditions are available upon request."
       },
-      "MM-003": {
-        circulation: [
-          "Research and network · RE/UTOPÍA",
-          "Territories · Murcia / Madrid",
-          "Mediation and archive · MiniMoto Gallery"
-        ],
-        documentation: "Collaboration map and process report are available upon request."
-      },
-      "MM-004": {
-        circulation: [
-          "Institutional position · MiniMoto Gallery",
-          "Archive and methodology of the device"
-        ],
-        documentation: "Statement, identity system and exhibition methodology are available upon request."
-      },
       "MM-005": {
         circulation: [
           "Exhibition · MiniMoto Gallery / La Central Baja",
@@ -190,21 +158,6 @@
           "即将举行的个展 · Centro Párraga"
         ],
         documentation: "项目正在制作中。工作资料与合作条件可通过邮件索取。"
-      },
-      "MM-003": {
-        circulation: [
-          "研究与网络 · RE/UTOPÍA",
-          "地域 · 穆尔西亚 / 马德里",
-          "调解与档案 · MiniMoto Gallery"
-        ],
-        documentation: "合作网络图与过程报告可通过邮件索取。"
-      },
-      "MM-004": {
-        circulation: [
-          "机构立场 · MiniMoto Gallery",
-          "装置的档案与方法"
-        ],
-        documentation: "立场文本、视觉身份与展览方法可通过邮件索取。"
       },
       "MM-005": {
         circulation: [
@@ -263,9 +216,9 @@
         name: "Diego Lobenal",
         role: "Dirección / comisariado",
         relation: "Estructura y acompañamiento",
-        bio: "Acompaña procesos, construye contextos de mediación y articula la circulación de los proyectos dentro y fuera de MiniMoto.",
-        focus: ["comisariado", "mediación", "producción", "circulación"],
-        projects: ["MM-002", "MM-003", "MM-004"]
+        bio: "Acompaña procesos, construye contextos de mediación y articula el contexto y el acompañamiento de los proyectos dentro y fuera de MiniMoto.",
+        focus: ["comisariado", "mediación", "producción", "contexto"],
+        projects: ["MM-002"]
       }
     ],
     en: [
@@ -313,9 +266,9 @@
         name: "Diego Lobenal",
         role: "Direction / curating",
         relation: "Structure and accompaniment",
-        bio: "He accompanies processes, constructs contexts of mediation and articulates the circulation of projects within and beyond MiniMoto.",
+        bio: "He accompanies processes, constructs contexts of mediation and articulates project development within and beyond MiniMoto.",
         focus: ["curating", "mediation", "production", "circulation"],
-        projects: ["MM-002", "MM-003", "MM-004"]
+        projects: ["MM-002"]
       }
     ],
     zh: [
@@ -363,9 +316,9 @@
         name: "Diego Lobenal",
         role: "方向 / 策展",
         relation: "结构与陪伴",
-        bio: "他陪伴创作过程、建立调解语境，并组织项目在 MiniMoto 内外的流通。",
+        bio: "他陪伴创作过程、建立调解语境，并组织项目在 MiniMoto 内外的发展。",
         focus: ["策展", "调解", "制作", "流通"],
-        projects: ["MM-002", "MM-003", "MM-004"]
+        projects: ["MM-002"]
       }
     ]
   }[lang];
@@ -436,8 +389,8 @@
         <p>${data.documentation}</p>
       </div>
       <div class="project-professional-actions">
-        <a href="mailto:minimoto.studio@gmail.com?subject=${subject}%20/%20dossier">${copy.dossier}</a>
-        <a href="mailto:minimoto.studio@gmail.com?subject=${subject}%20/%20availability">${copy.availability}</a>
+        <a href="https://mail.google.com/mail/u/?authuser=minimoto.studio@gmail.com&view=cm&fs=1&to=minimoto.studio@gmail.com&su=${subject}%20/%20dossier">${copy.dossier}</a>
+        <a href="https://mail.google.com/mail/u/?authuser=minimoto.studio@gmail.com&view=cm&fs=1&to=minimoto.studio@gmail.com&su=${subject}%20/%20availability">${copy.availability}</a>
       </div>
     `;
   }
@@ -479,7 +432,7 @@
           <p>${artist.bio}</p>
           <div class="artist-entry-focus">${artist.focus.map(item => `<span>${item}</span>`).join("")}</div>
           <div class="artist-entry-projects">${projectButtons}</div>
-          <a href="mailto:minimoto.studio@gmail.com?subject=${subject}">${copy.artistInfo}</a>
+          <a href="https://mail.google.com/mail/u/?authuser=minimoto.studio@gmail.com&view=cm&fs=1&to=minimoto.studio@gmail.com&su=${subject}">${copy.artistInfo}</a>
         </div>
       `;
       root.append(article);

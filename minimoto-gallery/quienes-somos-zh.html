@@ -1,63 +1,76 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#d3d2d1">
-  <meta name="description" content="MiniMoto Gallery——立场、工作方法与联系。">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="MiniMoto Gallery——关于、立场与联系。">
   <title>MiniMoto Gallery — 关于</title>
-
   <link rel="icon" href="./assets/favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wdth,wght@75..100,400..700&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./quienes-somos.css">
-  <link rel="stylesheet" href="./about-professional.css">
-  <link rel="stylesheet" href="./about-no-headlines.css">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./gallery-2026.css">
+  <link rel="stylesheet" href="./about-2026.css">
   <link rel="stylesheet" href="./minimoto-zh.css">
+  <link rel="stylesheet" href="./logo-motion.css">
+  <script src="./logo-motion.js" defer></script>
+  <script src="./about-menu.js" defer></script>
   <link rel="alternate" hreflang="es" href="./quienes-somos.html">
   <link rel="alternate" hreflang="en" href="./quienes-somos-en.html">
   <link rel="alternate" hreflang="zh-CN" href="./quienes-somos-zh.html">
-  <link rel="alternate" hreflang="x-default" href="./quienes-somos.html">
 </head>
 <body>
-  <header class="about-header">
-    <a class="about-brand" href="./index-zh.html" aria-label="MiniMoto Gallery">
-      <img src="./assets/logo-triple-dots.svg" alt="MiniMoto Gallery">
-    </a>
-
-    <nav aria-label="导航">
-      <a href="./quienes-somos.html" lang="es">ES</a>
-      <a class="language-switch" href="./quienes-somos-en.html" lang="en">EN</a>
-      <a href="./index-zh.html">返回 ×</a>
+  <header class="site-header">
+    <a class="brand" href="./index-zh.html" aria-label="MiniMoto Gallery，首页"><img src="./assets/minimoto-wordmark-2026.png" alt="MiniMoto"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">菜单</button>
+    <nav id="primary-nav" class="primary-nav" aria-label="主导航">
+      <a href="./index-zh.html#exhibitions">展览</a><a href="./index-zh.html#artists">艺术家</a><a href="./quienes-somos-zh.html">关于</a>
+      <a href="https://mail.google.com/mail/u/?authuser=minimoto.studio@gmail.com&view=cm&fs=1&to=minimoto.studio@gmail.com">联系</a>
+      <a href="./index.html" lang="es">ES</a><a href="./index-en.html" lang="en">EN</a>
     </nav>
   </header>
-
-  <main class="statement-page">
-    <figure class="statement-image">
-      <img
-        src="./assets/minimoto-about-2026.webp"
-        alt="MiniMoto Gallery 的工作现场：一位创作者站在一件正在形成的装置旁。"
-      >
-      <figcaption>MINIMOTO GALLERY / LA CENTRAL BAJA / 穆尔西亚 / 2026</figcaption>
-      <span class="image-mark" aria-hidden="true"><i></i><i></i><i></i></span>
-    </figure>
-
-    <article class="statement-panel statement-panel--no-headlines">
-      <p class="statement-code">MM / 立场 / 穆尔西亚</p>
-<div class="statement-copy">
-        <p>MiniMoto Gallery 是一家位于穆尔西亚的当代艺术画廊。我们与处于不同职业阶段的艺术家合作，从首次公开呈现到已有成熟履历的创作者。每一次合作都从作品本身出发：它需要怎样被准确地展示，展览之后还可以进入哪些场合。</p>
-        <p>空间会随项目改变。布展、文字和观众在展厅中的行走方式，都根据作品决定。驻留和现场行动只在项目确有需要时采用，不会被当作每次都要重复的固定格式。</p>
-        <p>MiniMoto 的规模使我们能够与艺术家保持直接的工作关系。我们可以反复检查布展、讨论具体决定，或重新审视一件作品，而不把过程变成流水线。有些合作始于一次展览；另一些则会延续，并随着时间采取不同形式。</p>
-        <p>画廊负责呈现和记录项目，安排参观，并让作品与收藏家、机构及其他专业空间建立联系。收藏一件作品既能支持艺术家之后的创作，也意味着与这件作品及其创作者的职业轨迹建立长期关系。</p>
+  <main class="about-main" id="top">
+    <section class="about-hero">
+      <div class="about-hero-copy">
+        <p class="eyebrow">关于 / MiniMoto Gallery</p>
+        <h1>一间只在尺度上“小”的画廊。</h1>
+        <p class="about-hero-lead">MiniMoto Gallery 是位于穆尔西亚的当代艺术画廊。我们与处于不同职业阶段的艺术家合作，并从作品自身的具体需求出发构建每一次展览。</p>
       </div>
-<div class="statement-actions">
-        <a class="private-contact" href="mailto:minimoto.studio@gmail.com?subject=与%20MiniMoto%20Gallery%20进行私下对话">
-          开始一场私下对话 ↗
-        </a>
-        <p>展览 · 驻留 · 激活行动<br>西班牙东南部</p>
+      <figure class="about-hero-image"><img src="./assets/minimoto-about-2026.webp" alt="MiniMoto Gallery 中一件正在布置的作品与工作场景。"></figure>
+    </section>
+    <section class="about-text">
+      <div class="about-text-title"><p class="eyebrow">MM / 立场</p><h2>把展览作为一种工作方式。</h2></div>
+      <div class="about-text-copy">
+        <p>每次合作都从作品本身开始：作品需要怎样被准确呈现，布展需要哪些决定，以及怎样的语境最有利于阅读作品。</p>
+        <p>空间随着每个项目改变。布展、文本与观看路径都由作品决定，而不是由一种固定公式决定。</p>
+        <p>MiniMoto 的尺度使我们能够与艺术家保持直接关系。有时间重新检查布展、讨论决定并回到作品本身，而不是把过程变成生产流水线。</p>
+        <p>画廊呈现并记录项目、安排参观，并在与作品相关时，将其与收藏家、机构和其他专业空间建立联系。</p>
       </div>
-    </article>
+    </section>
+    <section class="about-principles">
+      <header><div><p class="eyebrow">工作方式</p><h2>作品、语境、持续性。</h2></div></header>
+      <div class="about-principles-grid">
+        <article class="about-principle"><span>01</span><h3>展览</h3><p>每次展览都围绕作品以及作品与空间建立的关系进行设计。</p></article>
+        <article class="about-principle"><span>02</span><h3>制作</h3><p>在作品需要时，我们参与项目的开发、布展与呈现。</p></article>
+        <article class="about-principle"><span>03</span><h3>陪伴</h3><p>我们与艺术家、策展人、机构与收藏建立持续的工作关系。</p></article>
+      </div>
+    </section>
+    <section class="about-contact">
+      <div><p class="eyebrow">联系</p><h2>参观、作品、项目与对话。</h2></div>
+      <div class="about-contact-links">
+        <a href="https://mail.google.com/mail/u/?authuser=minimoto.studio@gmail.com&view=cm&fs=1&to=minimoto.studio@gmail.com&su=%E4%B8%8E%20MiniMoto%20Gallery%20%E5%AF%B9%E8%AF%9D">写信给 MiniMoto <span>→</span></a>
+        <a href="https://mail.google.com/mail/u/?authuser=minimoto.studio@gmail.com&view=cm&fs=1&to=minimoto.studio@gmail.com&su=%E9%A2%84%E7%BA%A6%E5%8F%82%E8%A7%82%20MiniMoto%20Gallery">预约参观 <span>→</span></a>
+        <a href="https://www.instagram.com/minimotogallery/" target="_blank" rel="noopener noreferrer">Instagram <span>↗</span></a>
+      </div>
+    </section>
   </main>
+  <footer class="site-footer">
+    <img src="./assets/logo-triple-dots.svg" alt="" aria-hidden="true">
+    <p>MiniMoto Gallery<br>Murcia / Spanish Southeast</p>
+    <div><a href="https://mail.google.com/mail/u/?authuser=minimoto.studio@gmail.com&view=cm&fs=1&to=minimoto.studio@gmail.com">minimoto.studio@gmail.com</a><a href="https://www.instagram.com/minimotogallery/" target="_blank" rel="noopener noreferrer">@minimotogallery</a></div>
+    <p class="footer-time">MiniMoto / 2026</p>
+  </footer>
 </body>
 </html>
