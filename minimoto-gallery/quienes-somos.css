@@ -506,3 +506,28 @@ img {
     width: min(120px, 50%);
   }
 }
+
+/* MiniMoto 2026 — sistema editorial */
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&family=Newsreader:opsz,wght@6..72,300..600&display=swap");
+:root {
+  --paper: #f4f3ef;
+  --paper-light: #ffffff;
+  --ink: #0a0a0a;
+  --mid: #b9b9b4;
+  --blue: #1c37ff;
+  --sans: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+}
+.about-header { background: rgba(244,243,239,.95); }
+.about-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 17px;
+  font-weight: 560;
+  letter-spacing: -.02em;
+}
+.about-brand::after { content: "MiniMoto Gallery"; }
+.about-brand img { width: 30px; height: 30px; }
+.statement-panel { background: var(--paper); }
+.statement-copy p { font-family: "Newsreader", Georgia, serif; font-size: clamp(15px,1.08vw,18px); line-height: 1.38; }

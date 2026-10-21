@@ -1,5 +1,38 @@
 const projects = [
   {
+    id: "MM-005",
+    group: "juan-sanchez",
+    title: "喷洒绘画",
+    artist: "Juan Sánchez",
+    year: "2026",
+    type: "展览 / 装置",
+    status: "30.10.2026 开幕",
+    images: [
+      {
+        src: "./assets/juan-sanchez-pintura-aspersion.svg",
+        alt: "Juan Sánchez 在 MiniMoto Gallery 的《喷洒绘画》展览图形卡片。",
+        caption: "Juan Sánchez / 喷洒绘画 / MiniMoto Gallery"
+      }
+    ],
+    body: `
+      <p><em>喷洒绘画</em>延续 Juan Sánchez 在<em>滴流绘画</em>中开始的研究，把绘画从表面转向一个循环系统。</p>
+      <p>储液罐、水泵、管道、压力、喷头、传感器、建筑与观众共同构成同一装置。工具不再只是辅助媒介，而成为绘画基础设施。</p>
+      <p>十多年来，Sánchez 通过 DIY、日常工具与隐蔽行为研究绘画的边界。在这件新装置中，空间与观众的激活直接参与作品的物质生成。</p>
+      <blockquote>30.10.2026 · 20:00 · MiniMoto Gallery / La Central Baja · C/ Pinatar 3, Murcia · 免费入场。</blockquote>
+      <p>策展：Cristina Luna Rodríguez。</p>
+    `,
+    tags: ["Juan Sánchez", "绘画", "液压系统", "DIY", "Cristina Luna Rodríguez"],
+    x: "0%",
+    y: "0%",
+    w: "50vw",
+    maxW: 820,
+    ratio: "16 / 10",
+    rotation: "0deg",
+    mobileRotation: "0deg",
+    shape: "",
+    mark: "MM-005"
+  },
+  {
     id: "MM-001",
     group: "el-cielo",
     title: "天空向我诉说了一些谎言，我正在坠落",
@@ -150,7 +183,7 @@ const projects = [
     status: "开放过程",
     images: [
       {
-        src: "./assets/minimoto-sigil.png",
+        src: "./assets/logo-triple-dots.svg",
         alt: "MiniMoto Gallery 的三点符号。",
         caption: "MiniMoto / 流通图"
       }
@@ -180,12 +213,12 @@ const projects = [
     status: "装置规则",
     images: [
       {
-        src: "./assets/minimoto-wordmark.png",
+        src: "./assets/logo-triple-dots.svg",
         alt: "MiniMoto Gallery 标志。",
         caption: "MiniMoto / 立场"
       },
       {
-        src: "./assets/minimoto-sigil.png",
+        src: "./assets/logo-triple-dots.svg",
         alt: "MiniMoto Gallery 的三点符号。",
         caption: "MiniMoto / 符号"
       }
@@ -208,6 +241,16 @@ const projects = [
 ];
 
 const artistProfiles = [
+  {
+    name: "Juan Sánchez",
+    role: "艺术家",
+    note: "扩展绘画、DIY、日常工具与机械系统。"
+  },
+  {
+    name: "Cristina Luna Rodríguez",
+    role: "策展人",
+    note: "《喷洒绘画》/ MM-005 策展。"
+  },
   {
     name: "Andrea Angulo",
     role: "艺术家",

@@ -1,5 +1,38 @@
 const projects = [
   {
+    id: "MM-005",
+    group: "juan-sanchez",
+    title: "Pintura por aspersión",
+    artist: "Juan Sánchez",
+    year: "2026",
+    type: "Exposición / instalación",
+    status: "Próxima apertura · 30.10.2026",
+    images: [
+      {
+        src: "./assets/juan-sanchez-pintura-aspersion.svg",
+        alt: "Cartela gráfica de Pintura por aspersión, exposición de Juan Sánchez en MiniMoto Gallery.",
+        caption: "Juan Sánchez / Pintura por aspersión / MiniMoto Gallery"
+      }
+    ],
+    body: `
+      <p><em>Pintura por aspersión</em> continúa la investigación iniciada por Juan Sánchez en <em>Pintura por goteo</em> y desplaza la pintura desde la superficie hacia un sistema de circulación.</p>
+      <p>Depósito, bomba, conductos, presión, aspersores, sensores, arquitectura y presencia pública forman parte de un mismo dispositivo. La herramienta deja de ser un medio auxiliar y pasa a comportarse como infraestructura pictórica.</p>
+      <p>Durante más de una década, Sánchez ha investigado los límites de la pintura mediante bricolaje, herramientas cotidianas y comportamientos encubiertos. En esta nueva instalación, el espacio y la activación del público participan materialmente en la producción de la obra.</p>
+      <blockquote>30.10.2026 · 20:00 · MiniMoto Gallery / La Central Baja · C/ Pinatar 3, Murcia · entrada libre.</blockquote>
+      <p>Comisariada por Cristina Luna Rodríguez.</p>
+    `,
+    tags: ["Juan Sánchez", "Pintura", "Sistema hidráulico", "Bricolaje", "Cristina Luna Rodríguez"],
+    x: "0%",
+    y: "0%",
+    w: "50vw",
+    maxW: 820,
+    ratio: "16 / 10",
+    rotation: "0deg",
+    mobileRotation: "0deg",
+    shape: "",
+    mark: "MM-005"
+  },
+  {
     id: "MM-001",
     group: "el-cielo",
     title: "El cielo me cuenta algunas mentiras, estoy cayendo",
@@ -150,7 +183,7 @@ const projects = [
     status: "Proceso abierto",
     images: [
       {
-        src: "./assets/minimoto-sigil.png",
+        src: "./assets/logo-triple-dots.svg",
         alt: "Símbolo de tres puntos de MiniMoto Gallery.",
         caption: "MiniMoto / diagrama de circulación"
       }
@@ -180,12 +213,12 @@ const projects = [
     status: "Regla del dispositivo",
     images: [
       {
-        src: "./assets/minimoto-wordmark.png",
+        src: "./assets/logo-triple-dots.svg",
         alt: "Logotipo de MiniMoto Gallery.",
         caption: "MiniMoto / posición"
       },
       {
-        src: "./assets/minimoto-sigil.png",
+        src: "./assets/logo-triple-dots.svg",
         alt: "Símbolo de tres puntos de MiniMoto Gallery.",
         caption: "MiniMoto / sigilo"
       }
@@ -208,6 +241,16 @@ const projects = [
 ];
 
 const artistProfiles = [
+  {
+    name: "Juan Sánchez",
+    role: "Artista",
+    note: "Pintura expandida, bricolaje, herramientas cotidianas y sistemas mecanizados."
+  },
+  {
+    name: "Cristina Luna Rodríguez",
+    role: "Comisaria",
+    note: "Comisariado de Pintura por aspersión / MM-005."
+  },
   {
     name: "Andrea Angulo",
     role: "Artista",

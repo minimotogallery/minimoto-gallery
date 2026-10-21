@@ -39,7 +39,8 @@
     "MM-001/B": "artists",
     "MM-002": "exhibitions",
     "MM-003": "research",
-    "MM-004": "research"
+    "MM-004": "research",
+    "MM-005": "exhibitions"
   };
 
   const information = {
@@ -90,6 +91,14 @@
           "Archivo y metodología del dispositivo"
         ],
         documentation: "Statement, identidad y metodología expositiva disponibles bajo consulta."
+      },
+      "MM-005": {
+        circulation: [
+          "Exposición · MiniMoto Gallery / La Central Baja",
+          "Inauguración · 30.10.2026 · 20:00",
+          "Comisariado · Cristina Luna Rodríguez"
+        ],
+        documentation: "Dossier, documentación del proceso e información de obra disponibles bajo consulta."
       }
     },
     en: {
@@ -139,6 +148,14 @@
           "Archive and methodology of the device"
         ],
         documentation: "Statement, identity system and exhibition methodology are available upon request."
+      },
+      "MM-005": {
+        circulation: [
+          "Exhibition · MiniMoto Gallery / La Central Baja",
+          "Opening · 30.10.2026 · 20:00",
+          "Curated by · Cristina Luna Rodríguez"
+        ],
+        documentation: "Dossier, process documentation and information on works are available upon request."
       }
     },
     zh: {
@@ -188,6 +205,14 @@
           "装置的档案与方法"
         ],
         documentation: "立场文本、视觉身份与展览方法可通过邮件索取。"
+      },
+      "MM-005": {
+        circulation: [
+          "展览 · MiniMoto Gallery / La Central Baja",
+          "开幕 · 30.10.2026 · 20:00",
+          "策展 · Cristina Luna Rodríguez"
+        ],
+        documentation: "项目资料、过程文献与作品信息可通过邮件索取。"
       }
     }
   }[lang];
@@ -217,6 +242,22 @@
         bio: "Investiga la masculinidad, las micromitologías digitales y la construcción de épicas domésticas mediante objetos, activaciones y dispositivos expositivos.",
         focus: ["masculinidad", "activación", "dormitorio", "bienes digitales"],
         projects: ["MM-002"]
+      },
+      {
+        name: "Juan Sánchez",
+        role: "Artista",
+        relation: "Exposición MM-005",
+        bio: "Investiga los límites de la pintura mediante bricolaje, herramientas cotidianas y sistemas mecanizados que convierten el hacer pictórico en infraestructura.",
+        focus: ["pintura", "bricolaje", "sistema hidráulico", "automatización"],
+        projects: ["MM-005"]
+      },
+      {
+        name: "Cristina Luna Rodríguez",
+        role: "Comisaria",
+        relation: "Pintura por aspersión",
+        bio: "Comisaria de la exposición Pintura por aspersión de Juan Sánchez en MiniMoto Gallery.",
+        focus: ["comisariado", "pintura", "exposición"],
+        projects: ["MM-005"]
       },
       {
         name: "Diego Lobenal",
@@ -253,6 +294,22 @@
         projects: ["MM-002"]
       },
       {
+        name: "Juan Sánchez",
+        role: "Artist",
+        relation: "Exhibition MM-005",
+        bio: "He investigates the limits of painting through DIY methods, everyday tools and mechanised systems that turn pictorial making into infrastructure.",
+        focus: ["painting", "DIY", "hydraulic system", "automation"],
+        projects: ["MM-005"]
+      },
+      {
+        name: "Cristina Luna Rodríguez",
+        role: "Curator",
+        relation: "Spray Painting",
+        bio: "Curator of Juan Sánchez’s exhibition Spray Painting at MiniMoto Gallery.",
+        focus: ["curating", "painting", "exhibition"],
+        projects: ["MM-005"]
+      },
+      {
         name: "Diego Lobenal",
         role: "Direction / curating",
         relation: "Structure and accompaniment",
@@ -285,6 +342,22 @@
         bio: "他通过物件、激活行动与展览装置，研究男性气质、数字微型神话与家庭内部的史诗想象。",
         focus: ["男性气质", "激活行动", "卧室", "数字资产"],
         projects: ["MM-002"]
+      },
+      {
+        name: "Juan Sánchez",
+        role: "艺术家",
+        relation: "MM-005 展览",
+        bio: "通过 DIY、日常工具与机械系统研究绘画边界，使绘画行为转化为基础设施。",
+        focus: ["绘画", "DIY", "液压系统", "自动化"],
+        projects: ["MM-005"]
+      },
+      {
+        name: "Cristina Luna Rodríguez",
+        role: "策展人",
+        relation: "喷洒绘画",
+        bio: "Juan Sánchez 在 MiniMoto Gallery 的《喷洒绘画》展览策展人。",
+        focus: ["策展", "绘画", "展览"],
+        projects: ["MM-005"]
       },
       {
         name: "Diego Lobenal",

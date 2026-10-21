@@ -1,5 +1,38 @@
 const projects = [
   {
+    id: "MM-005",
+    group: "juan-sanchez",
+    title: "Spray Painting",
+    artist: "Juan Sánchez",
+    year: "2026",
+    type: "Exhibition / installation",
+    status: "Opening 30.10.2026",
+    images: [
+      {
+        src: "./assets/juan-sanchez-pintura-aspersion.svg",
+        alt: "Graphic card for Spray Painting, Juan Sánchez exhibition at MiniMoto Gallery.",
+        caption: "Juan Sánchez / Spray Painting / MiniMoto Gallery"
+      }
+    ],
+    body: `
+      <p><em>Spray Painting</em> continues Juan Sánchez’s research from <em>Drip Painting</em>, shifting painting from the surface towards a system of circulation.</p>
+      <p>Tank, pump, pipes, pressure, sprinklers, sensors, architecture and public presence form a single device. The tool stops being auxiliary and becomes pictorial infrastructure.</p>
+      <p>For more than a decade, Sánchez has investigated the limits of painting through DIY methods, everyday tools and covert behaviours. In this installation, space and public activation participate materially in the production of the work.</p>
+      <blockquote>30.10.2026 · 20:00 · MiniMoto Gallery / La Central Baja · C/ Pinatar 3, Murcia · free entry.</blockquote>
+      <p>Curated by Cristina Luna Rodríguez.</p>
+    `,
+    tags: ["Juan Sánchez", "Painting", "Hydraulic system", "DIY", "Cristina Luna Rodríguez"],
+    x: "0%",
+    y: "0%",
+    w: "50vw",
+    maxW: 820,
+    ratio: "16 / 10",
+    rotation: "0deg",
+    mobileRotation: "0deg",
+    shape: "",
+    mark: "MM-005"
+  },
+  {
     id: "MM-001",
     group: "el-cielo",
     title: "The sky tells me a few lies, I am falling",
@@ -150,7 +183,7 @@ const projects = [
     status: "Open process",
     images: [
       {
-        src: "./assets/minimoto-sigil.png",
+        src: "./assets/logo-triple-dots.svg",
         alt: "Three-dot symbol of MiniMoto Gallery.",
         caption: "MiniMoto / circulation diagram"
       }
@@ -180,12 +213,12 @@ const projects = [
     status: "Rule of the device",
     images: [
       {
-        src: "./assets/minimoto-wordmark.png",
+        src: "./assets/logo-triple-dots.svg",
         alt: "MiniMoto Gallery wordmark.",
         caption: "MiniMoto / position"
       },
       {
-        src: "./assets/minimoto-sigil.png",
+        src: "./assets/logo-triple-dots.svg",
         alt: "Three-dot symbol of MiniMoto Gallery.",
         caption: "MiniMoto / sigil"
       }
@@ -208,6 +241,16 @@ const projects = [
 ];
 
 const artistProfiles = [
+  {
+    name: "Juan Sánchez",
+    role: "Artist",
+    note: "Expanded painting, DIY methods, everyday tools and mechanised systems."
+  },
+  {
+    name: "Cristina Luna Rodríguez",
+    role: "Curator",
+    note: "Curator of Spray Painting / MM-005."
+  },
   {
     name: "Andrea Angulo",
     role: "Artist",

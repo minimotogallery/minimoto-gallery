@@ -1,36 +1,53 @@
-# Minimoto Gallery — brand notes (working)
+# MiniMoto Gallery — Brand Book 2026
 
-Source reference (internal):
-- https://chatgpt.com/g/g-p-67c59cf43ea081918b3bf6cfeba8f137/c/6982919f-ad48-8393-94ae-1d3e0ede9404
+## Dirección
+Sistema editorial sobrio para web, publicaciones y material impreso. La identidad no depende de ornamentos ni titulares inventados: proyecto, artista, fecha, imagen y contexto deben sostener la pieza.
 
-## Palette
-Core accent:
-- **Rojo Nuclear** `#E21E0A` (identity / impact; do not overuse)
+## Marca
+Símbolo principal: tres puntos en triángulo.
+Uso recomendado: negro + negro + azul eléctrico sobre fondos claros; blanco + blanco + azul sobre fondos oscuros.
+Activo web: `assets/logo-triple-dots.svg`.
 
-Base:
-- **Negro Absoluto** `#000000`
-- **Negro Carbón** `#1A1A1A`
+## Tipografía
+- **Instrument Sans** — navegación, metadatos, fechas, créditos, botones y textos funcionales.
+- **Newsreader** — títulos de exposiciones, nombres de artistas y momentos editoriales.
+- Evitar Grenze Gotisch como tipografía identitaria principal.
 
-Neutrals:
-- **Gris Acero Oscuro** `#2F2F2F`
-- **Gris Cemento** `#8E8E8E`
-- **Gris Hueso** `#D9D9D9`
-- **Blanco Técnico** `#FFFFFF`
+## Paleta
+- Negro: `#0A0A0A`
+- Blanco: `#FFFFFF`
+- Papel: `#F4F3EF`
+- Gris línea: `#B9B9B4`
+- Azul MiniMoto: `#1C37FF`
 
-Interference (optional):
-- **Rojo Oscuro / Sangre Seca** `#7A0C06`
+El azul funciona como señal, no como fondo dominante.
 
-## Usage rule of thumb (60/30/10)
-- 60%: blacks + dark grays
-- 30%: bone/white for legibility
-- 10% max: red nuclear (accent)
+## Composición
+- Márgenes amplios.
+- Retículas claras.
+- Una jerarquía fuerte por pantalla.
+- Títulos sin versales forzadas.
+- Imágenes sin filtros decorativos.
+- Líneas de 1 px como sistema de separación.
+- Metadatos pequeños y funcionales.
+- No numerar piezas gráficas si la numeración no pertenece al contenido.
 
-## Conceptual translation
-- Red: signal / wound / code / ritual
-- Black: frame / containment / power
-- Grays: process / archive / system
-- White: technical plan / reading / breathing
+## Publicaciones
+Plantilla estable:
+1. artista / proyecto;
+2. fecha y hora;
+3. lugar;
+4. imagen o recurso gráfico;
+5. símbolo de tres puntos.
 
-## Web assets
-- `assets/logo-triple-dots.svg`
-- `design-tokens.json`
+No repetir “MiniMoto Gallery” de forma redundante en el pie cuando la publicación ya pertenece a la cuenta de la galería.
+
+## Web
+La web abandona el lenguaje “Neomedieval Battle Ground” como sistema dominante.
+Se conservan las funciones de archivo, fichas, índice y artistas, pero el tablero se convierte en una retícula editorial legible.
+
+## Proyecto actual
+**Juan Sánchez — Pintura por aspersión**
+30.10.2026 · 20:00
+Comisariada por Cristina Luna Rodríguez
+MiniMoto Gallery / La Central Baja · C/ Pinatar 3, Murcia

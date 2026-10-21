@@ -2,26 +2,26 @@
   "$schema": "https://design-tokens.github.io/community-group/format/#schema",
   "minimoto": {
     "color": {
-      "redNuclear": { "value": "#E21E0A" },
-      "blackAbsolute": { "value": "#000000" },
-      "blackCarbon": { "value": "#1A1A1A" },
-      "graySteel": { "value": "#2F2F2F" },
-      "grayCement": { "value": "#8E8E8E" },
-      "grayBone": { "value": "#D9D9D9" },
-      "whiteTech": { "value": "#FFFFFF" },
-      "redDried": { "value": "#7A0C06" }
+      "black": { "value": "#0A0A0A" },
+      "white": { "value": "#FFFFFF" },
+      "paper": { "value": "#F4F3EF" },
+      "line": { "value": "#B9B9B4" },
+      "blue": { "value": "#1C37FF" }
+    },
+    "typography": {
+      "sans": { "value": "Instrument Sans" },
+      "editorial": { "value": "Newsreader" }
     },
     "usage": {
-      "background": { "value": "{minimoto.color.blackAbsolute}" },
-      "surface": { "value": "{minimoto.color.blackCarbon}" },
-      "text": { "value": "{minimoto.color.grayBone}" },
-      "textStrong": { "value": "{minimoto.color.whiteTech}" },
-      "accent": { "value": "{minimoto.color.redNuclear}" },
-      "accentDeep": { "value": "{minimoto.color.redDried}" }
+      "background": { "value": "{minimoto.color.paper}" },
+      "surface": { "value": "{minimoto.color.white}" },
+      "text": { "value": "{minimoto.color.black}" },
+      "accent": { "value": "{minimoto.color.blue}" },
+      "line": { "value": "{minimoto.color.line}" }
     },
     "rules": {
-      "accentMaxShare": { "value": 0.1, "description": "Keep red as ~10% max so it keeps power." },
-      "mixingNote": { "value": "Avoid using pure white as a dominant background with red; prefer black/gray foundations." }
+      "accent": { "value": "Use blue as a punctual signal, never as the dominant field." },
+      "composition": { "value": "Wide margins, clear grids, one strong hierarchy per screen." }
     }
   }
 }

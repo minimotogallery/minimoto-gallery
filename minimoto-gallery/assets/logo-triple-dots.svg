@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Minimoto Gallery: triple-dot mark (triangle). One dot is accent red. -->
-  <rect width="256" height="256" fill="#000000"/>
-  <circle cx="88" cy="150" r="14" fill="#FFFFFF"/>
-  <circle cx="128" cy="106" r="14" fill="#D9D9D9"/>
-  <circle cx="168" cy="150" r="14" fill="#E21E0A"/>
+  <circle cx="78" cy="148" r="20" fill="#0A0A0A"/>
+  <circle cx="128" cy="98" r="20" fill="#1C37FF"/>
+  <circle cx="178" cy="148" r="20" fill="#0A0A0A"/>
 </svg>
