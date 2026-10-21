@@ -9,9 +9,19 @@ const projects = [
     status: "Próxima apertura · 30.10.2026",
     images: [
       {
-        src: "./assets/juan-sanchez-pintura-aspersion.svg",
-        alt: "Cartela gráfica de Pintura por aspersión, exposición de Juan Sánchez en MiniMoto Gallery.",
-        caption: "Juan Sánchez / Pintura por aspersión / MiniMoto Gallery"
+        src: "./assets/juan-sanchez-coat.jpg",
+        alt: "Prenda transparente suspendida, imagen de proceso de Pintura por aspersión.",
+        caption: "Juan Sánchez / Pintura por aspersión / proceso"
+      },
+      {
+        src: "./assets/juan-sanchez-hose.jpg",
+        alt: "Bobina de conducto utilizada en el sistema de Pintura por aspersión.",
+        caption: "Juan Sánchez / materiales y sistema"
+      },
+      {
+        src: "./assets/juan-sanchez-fittings.jpg",
+        alt: "Conectores del sistema hidráulico de Pintura por aspersión.",
+        caption: "Juan Sánchez / detalles de proceso"
       }
     ],
     body: `

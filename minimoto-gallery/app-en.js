@@ -9,9 +9,19 @@ const projects = [
     status: "Opening 30.10.2026",
     images: [
       {
-        src: "./assets/juan-sanchez-pintura-aspersion.svg",
-        alt: "Graphic card for Spray Painting, Juan Sánchez exhibition at MiniMoto Gallery.",
-        caption: "Juan Sánchez / Spray Painting / MiniMoto Gallery"
+        src: "./assets/juan-sanchez-coat.jpg",
+        alt: "Transparent suspended garment, process image for Spray Painting.",
+        caption: "Juan Sánchez / Spray Painting / process"
+      },
+      {
+        src: "./assets/juan-sanchez-hose.jpg",
+        alt: "Coiled pipe used in the Spray Painting system.",
+        caption: "Juan Sánchez / materials and system"
+      },
+      {
+        src: "./assets/juan-sanchez-fittings.jpg",
+        alt: "Fittings from the hydraulic system for Spray Painting.",
+        caption: "Juan Sánchez / process details"
       }
     ],
     body: `

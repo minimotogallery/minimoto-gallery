@@ -9,9 +9,19 @@ const projects = [
     status: "30.10.2026 开幕",
     images: [
       {
-        src: "./assets/juan-sanchez-pintura-aspersion.svg",
-        alt: "Juan Sánchez 在 MiniMoto Gallery 的《喷洒绘画》展览图形卡片。",
-        caption: "Juan Sánchez / 喷洒绘画 / MiniMoto Gallery"
+        src: "./assets/juan-sanchez-coat.jpg",
+        alt: "透明悬挂服装，《喷洒绘画》的过程图像。",
+        caption: "Juan Sánchez / 喷洒绘画 / 过程"
+      },
+      {
+        src: "./assets/juan-sanchez-hose.jpg",
+        alt: "《喷洒绘画》系统中使用的盘绕管道。",
+        caption: "Juan Sánchez / 材料与系统"
+      },
+      {
+        src: "./assets/juan-sanchez-fittings.jpg",
+        alt: "《喷洒绘画》液压系统的连接件。",
+        caption: "Juan Sánchez / 过程细节"
       }
     ],
     body: `
