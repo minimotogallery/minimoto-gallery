@@ -8,6 +8,7 @@
       circulationTitle: "Información y documentación",
       documentation: "Documentación",
       dossier: "Solicitar dossier ↗",
+      pressDossier: "Dosier de prensa ↗",
       availability: "Consultar obra y disponibilidad ↗",
       artistInfo: "Solicitar información ↗",
       rosterIntro: "Prácticas acompañadas, artistas y agentes que construyen el dispositivo de MiniMoto.",
@@ -17,6 +18,7 @@
       circulationTitle: "Information and documentation",
       documentation: "Documentation",
       dossier: "Request dossier ↗",
+      pressDossier: "Press dossier ↗",
       availability: "Ask about works and availability ↗",
       artistInfo: "Request information ↗",
       rosterIntro: "Accompanied practices, artists and agents who construct the MiniMoto device.",
@@ -26,6 +28,7 @@
       circulationTitle: "信息与文献",
       documentation: "文献",
       dossier: "索取项目资料 ↗",
+      pressDossier: "媒体资料 ↗",
       availability: "咨询作品与可获得性 ↗",
       artistInfo: "索取相关信息 ↗",
       rosterIntro: "由 MiniMoto 陪伴的实践、艺术家与共同建构这一装置的协作者。",
@@ -381,6 +384,10 @@
     if (!panel || !data || !project) return;
 
     const subject = encodeURIComponent(`${copy.projectPrefix} — ${project.title}`);
+    const dossierHref = id === "MM-005"
+      ? "./prensa-pintura-aspersion.html"
+      : `https://mail.google.com/mail/u/?authuser=minimoto.studio@gmail.com&view=cm&fs=1&to=minimoto.studio@gmail.com&su=${subject}%20/%20dossier`;
+    const dossierLabel = id === "MM-005" ? copy.pressDossier : copy.dossier;
     panel.innerHTML = `
       <h3>${copy.circulationTitle}</h3>
       <ol>${data.circulation.map(item => `<li>${item}</li>`).join("")}</ol>
@@ -389,7 +396,7 @@
         <p>${data.documentation}</p>
       </div>
       <div class="project-professional-actions">
-        <a href="https://mail.google.com/mail/u/?authuser=minimoto.studio@gmail.com&view=cm&fs=1&to=minimoto.studio@gmail.com&su=${subject}%20/%20dossier">${copy.dossier}</a>
+        <a href="${dossierHref}">${dossierLabel}</a>
         <a href="https://mail.google.com/mail/u/?authuser=minimoto.studio@gmail.com&view=cm&fs=1&to=minimoto.studio@gmail.com&su=${subject}%20/%20availability">${copy.availability}</a>
       </div>
     `;

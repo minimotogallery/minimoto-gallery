@@ -6,7 +6,7 @@ const projects = [
     artist: "Juan Sánchez",
     year: "2026",
     type: "Exhibition / installation",
-    status: "Opening 30.10.2026",
+    status: "30.10—21.12.2026 · opening 30.10 · 20:00",
     images: [
       {
         src: "./assets/juan-sanchez-coat.jpg",
